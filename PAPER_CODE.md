@@ -44,5 +44,5 @@ David Mobley and Michael Gilson wrote a recent review paper on benchmarking bind
 A variety of community contributions have already come in, with some contributions extensive enough that one new author has already been added and another is being added (as of this writing).
 The paper is substantially longer new, covers more of the field, and includes a variety of new developments which occurred since its original publication. 
 
-
+We will also make available some practical, detailed instructions on using GitHub in this manner, though authors using this model will need to gain some basic familiarity with using git and GitHub, or have a co-author who handles this aspect.
  
