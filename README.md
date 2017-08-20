@@ -20,7 +20,7 @@ Here we provide:
 - Our LaTeX template
 - An example article using the template, with links to others
 - LaTeX formatting tips for using our template well in combination with GitHub
-- See also a (brief explanation of "paper writing as code development")[http://https://github.com/livecomsjournal/journal_information/blob/master/editorial_material/PAPER_CODE.md], the model we recommend for LiveCoMS.
+- See also a [brief explanation of "paper writing as code development"](http://https://github.com/livecomsjournal/journal_information/blob/master/editorial_material/PAPER_CODE.md), the model we recommend for LiveCoMS.
 
 ## LaTeX templates
 
