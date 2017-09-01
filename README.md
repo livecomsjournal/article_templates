@@ -1,20 +1,5 @@
 # Preparing LaTex articles using GitHub for the Living Journal of Computational Molecular Sciences ([LiveCoMS](http://www.livecomsjournal.org/))
 
-## About the journal
-
-LiveCoMS strives to advance science and education in the computational molecular sciences via a new way of publishing.
-We focus on publishing several types of living documents or [perpetual review papers](https://arxiv.org/abs/1502.01329), providing authors a mechanism to publish and maintain authoritative works which are regularly updated with community input, while still getting formal publication credit for these articles. 
-We focus currently on four major types of such documents:
-- Best practices guides, which are up-to-date reviews of how to carry out specific computational experiments.
-- Perpetual reviews, periodically updated versions of traditional reviews
-- Tutorials
-- Comparisons between simulation packages
-Our focus is on documents which require ongoing updates to stay current and useful.
-
-LiveCoMS is an *overlay journal*, and does not host articles; rather, it "publishes" preprints.
-Articles submitted to LiveCoMS are preprints (using our LaTeX templates) permanently archived elsewhere; we provide peer reviews of these, then link to and highlight them, increasing their visibility and providing them with formal status as peer-reviewed publications.
-We ask that articles intended for submission to LiveCoMS use our provided templates in order to create a unified look at feel for articles in the journal.
-
 ## LaTeX and GitHub
 
 LaTeX is a powerful typesetting program that is very commonly used in the mathematics and physics community, and increasingly in the computational sciences. We have a provide a LaTeX template for LiveCoMS in order to make it easy to have a pleasing, consistent visual style. 
