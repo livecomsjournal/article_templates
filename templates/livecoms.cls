@@ -25,6 +25,26 @@
 \newif\if@reqslineno
 \DeclareOption{lineno}{\@reqslinenotrue}
 
+%% the type of document this is.  The current types:
+% bestpractices, editorial, tutorial, review, comparison, lessons
+\newif\if@bestpractices
+\DeclareOption{bestpractices}{\@bestpracticestrue}
+
+\newif\if@editorial
+\DeclareOption{editorial}{\@editorialtrue}
+
+\newif\if@tutorial
+\DeclareOption{tutorial}{\@tutorialtrue}
+
+\newif\if@review
+\DeclareOption{review}{\@reviewtrue}
+
+\newif\if@comparison
+\DeclareOption{comparison}{\@comparisontrue}
+
+\newif\if@lessons
+\DeclareOption{lessons}{\@lessonstrue}
+
 %% Linespacing.
 \newif\if@onehalfspacing
 \newif\if@doublespacing
@@ -104,7 +124,7 @@
 % \captionsetup*[table]{skip=\medskipamount}
 
 
-\RequirePackage{natbib}
+\RequirePackage[super,sort&compress]{natbib}
 \renewcommand{\bibfont}{\small}
 % modifed from https://github.com/gbhutani/vancouver_authoryear_bibstyle/
 \IfFileExists{vancouver-livecoms.bst}
@@ -143,16 +163,67 @@
 %
 % headers and footers
 %
+
 \RequirePackage{fancyhdr}  % custom headers/footers
 \RequirePackage{lastpage}  % Number of pages in the document
 \pagestyle{fancy}          % Enables the custom headers/footers
 \addtolength{\headwidth}{\marginparsep}
 \addtolength{\headwidth}{\marginparwidth}
+
+%% different document types listed here
+
+\newif\ifdocumenttype
+\documenttypefalse
+
+\if@bestpractices
+\documenttypetrue
+\newcommand{\documenttype}{Best Practices Guide}
+\else
+ % nothing
+\fi
+
+\if@editorial
+\documenttypetrue
+\newcommand{\documenttype}{Editorial}
+\else
+% nothing
+\fi
+
+\if@tutorial
+\documenttypetrue
+\newcommand{\documenttype}{Tutorial}
+\else
+% nothing
+\fi
+
+\if@review
+\documenttypetrue
+\newcommand{\documenttype}{Perpetual Review}
+\else
+% nothing
+\fi
+
+\if@comparison
+\documenttypetrue
+\newcommand{\documenttype}{Molecular Simulation Comparison}
+\else
+% nothing
+\fi
+
+\if@lessons
+\documenttypetrue
+\newcommand{\documenttype}{``Lessons Learned'' Document}
+\else
+% nothing
+\fi
+
+\ifdocumenttype
 \fancyhf{}
 \chead{%
 \setlength{\fboxsep}{3pt}
-%\colorbox{LiveCoMSMediumGrey}{\begin{minipage}{\headwidth}\centering\color{white} Manuscript submitted to LiveCoMS\end{minipage}}%
+\colorbox{LiveCoMSMediumGrey}{\begin{minipage}{\headwidth}\centering\color{white} A LiveCoMS \documenttype\end{minipage}}%
 }
+\fi
 
 % Footers
 \rfoot{\small\color{LiveCoMSMediumGrey}\thepage\space of\space\pageref{LastPage}}%
