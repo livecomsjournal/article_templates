@@ -2,12 +2,10 @@
 
 ## Getting started
 
-To get started with our template, clone [this repository](https://github.com/livecomsjournal/article_templates) by clicking the "clone or download button" and download a `.zip` file. Then navigate to
-the `templates` directory, copy the files to where you will be
-working, and get started!
+To get started with our template, clone [this repository](https://github.com/livecomsjournal/article_templates) by clicking the "clone or download button" and download a `.zip` file. 
+Then navigate to the `templates` directory, copy the files to where you will be working, and get started!
 
-##
+## After Forking
 
-After forking, edit `your.README.md` and move it to `READ.md`, and you
-are set to write the article in your own repostitory. You can also
-delete the `example.tex` files that don't match your article type.
+Edit `your.README.md` and move it to `READ.md`, and you are set to write the article in your own repostitory. 
+You can also delete the `example.tex` files that don't match your article type.

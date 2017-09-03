@@ -14,7 +14,7 @@ which provides substantial control over the formatting.
 <!-- We suggest listing contributers in order of addition. -->
 - Albert Einstein, Institute for Advanced Study, Princeton, NJ, USA. Contributed to discussion of dice.
 - Isaac Asimov, Boston University, Boston, MA. Provided important background information about robots.
-- A. Ada King-Noel, London, UK
+- A. Ada King-Noel, London, UK. Provided initial draft of code for computing Bernouilli numbers.
 - Bruce Banner, Avengers Institute, New York, NY. Made several important changes involving gamma rays.
 - Walter H. White, J. P. Wynne High School, Albequerque, NM.  Had several key suggestions on certain synthetic pathways.
 
@@ -35,6 +35,6 @@ This paper is being developed as a living document, open to changes from the com
 - 5 May 2017: Made it REALLY a lot better.
 - 3 May 2017: EMH added as author. In addition to greatly improved discussion of best pratices in marlin fishing, text made significantly more economical.
 - 1 May 2017: Made it lots, lots, better.
-- 12 April 2017: 
+- 12 April 2017: added information on best practices use of gamma radiation.
 - 1 April 2017: Started document
 
