@@ -7,5 +7,5 @@ Then navigate to the `templates` directory, copy the files to where you will be 
 
 ## After Forking
 
-Edit `your.README.md` and move it to `READ.md`, and you are set to write the article in your own repostitory. 
+Edit `your.README.md` and move it to `READ.md`, and you are set to write the article in your own repository. 
 You can also delete the `example.tex` files that don't match your article type.
