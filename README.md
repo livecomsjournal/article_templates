@@ -5,7 +5,7 @@
 - LiveCoMS's LaTeX templates for all the different article types
 - An example article using the template
 - [LaTeX formatting tips for using our template well in combination with GitHub](information_for_authors.md)
-- [CC-BY-4.0 license](https://creativecommons.org/licenses/by/4.0/) under which these templates are released.
+- [CC-BY-4.0 license](https://creativecommons.org/licenses/by/4.0/) under which these templates are released
 
 ## Description of files.
 This repository provides LaTeX templates to prepare articles for LiveCoMS. Our templates are adapted from the eLife Overleaf templates (v1.4; obtained 8/10/2017). 
@@ -18,7 +18,7 @@ Our template files, including a LaTeX template `.tex` (which itself provides an 
 
 * To get started with our template, clone [this repository](https://github.com/livecomsjournal/article_templates) or click the "clone or download button" and download and unzip the a `.zip file`.
 
-* Navigate to the `templates` directory, pick your article type `.tex` file, rename this file to match the name your want, and delete the other `.tex` files.  Rename `templates` to a name of your choice.
+* Navigate to the `templates` directory, pick your article type `.tex` file, rename this file to match the name your want, and delete the other `.tex` files.  Rename the `templates` directory to a name of your choice.
 
 * Edit `your.README.md` to be suitable for your document, move it to `README.md`.
 

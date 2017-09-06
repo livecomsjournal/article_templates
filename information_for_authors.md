@@ -11,11 +11,9 @@ We request that articles developed for LiveCoMS do so by creating a GitHub repos
 GitHub has a substantial set of online tutorials and answered questions.  [It is very easy to set up a repository in GitHub](https://help.github.com/articles/create-a-repo/). 
 
 Some particular recommendations we have when you set up your GitHub repository. 
-- Use the issue tracker.  The [issue tracker model](https://guides.github.com/features/issues/) is a powerful way to manage
+- Use the issue tracker.  The [issue tracker model](https://guides.github.com/features/issues/) is a powerful way to manage contributions from a number of different authors and contributors.
 - [Protect the master branch](https://help.github.com/articles/about-protected-branches/) 
 - We recommend adding changes to the repository [through pull requests](https://help.github.com/articles/proposing-changes-to-your-work-with-pull-requests/). In this way, other people can easily see what changes are being requested.
-
-### Creating document versions
 
 ### Some LaTeX formatting tips
 
