@@ -16,7 +16,7 @@
 \usepackage{siunitx}
 \DeclareSIUnit\Molar{M}
 \newcommand{\versionnumber}{1.3}  % you should update the minor version number in preprints and major version number of submissions.
-\newcommand{\githubrepository}{https://github.com/myaccount/homegithubrepository}  %this should be the main github repository for this article
+\newcommand{\githubrepository}{\url{https://github.com/myaccount/homegithubrepository}}  %this should be the main github repository for this article
 \graphicspath{{figures/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% ARTICLE SETUP
@@ -247,18 +247,23 @@ Some filler text, because empty templates look really poor. \lipsum[1]
 
 \section{Author Contributions}
 %%%%%%%%%%%%%%%%
-% Attribute authors into the general categories:
-% * ''wrote sections X and Y''.
-% * ''contributed to all sections''.
-% * ''contributed to section X.''
-% * ''performed and analyzed the experiments in section Y''.
-% See the policies ``Policies on Authorship'' section of https://livecoms.github.io for more information on
-% deciding on authorship and author order.
+% This section mustt describe the actual contributions of
+% author. Since this is an electronic-only journal, there is 
+% no length limit when you describe the authors' contributions, 
+% so we recommend describing what they actually did rather than 
+% simply categorizing them in a small number of
+% predefined roles as might be done in other journals.
+%
+% See the policies ``Policies on Authorship'' section of https://livecoms.github.io 
+% for more information on deciding on authorship and author order.
 %%%%%%%%%%%%%%%%
-FMS wrote sections X and Z. RMS contributed to the writing of sections Y and W.
-TMP contributed to the writing of sections Y and W. ITP contributed to all sections.
+FMS wrote sections X and Z. RMS contributed to the writing of sections
+Y and W.  TMP contributed to the writing of sections Y and W. ITP
+contributed to all sections.  ADP wrote sections W and Y, performed
+and analyzed the experiments in Z, made figures 4-6, and edited the
+whole manuscript as well as standardizing table formatting.
 For a more detailed description of contributions,
-see the GitHub issue tracking and changelog at \url{\githubrepository}.
+see the GitHub issue tracking and changelog at \githubrepository.
 
 \section{Other Contributions}
 %%%%%%%%%%%%%%%
@@ -266,17 +271,19 @@ see the GitHub issue tracking and changelog at \url{\githubrepository}.
 % accepted into the paper, or that upon discussion altered what was in the paper.
 % Multiple significant contributions might mean that the contributor
 % should be moved to authorship at the discretion of the a
+%
 % See the policies ``Policies on Authorship'' section of https://livecoms.github.io for
-%more information on deciding on authorship and author order.
+% more information on deciding on authorship and author order.
 %%%%%%%%%%%%%%%
 EGP provided inportant insights on the challenges faced by nonequilibrium simulations.
 FTP provided several key citations on energy conservation. For a more detailed description of contributions,
-see the GitHub issue tracking and changelog at \url{\githubrepository}.
+see the GitHub issue tracking and changelog at \githubrepository.
 
 \section{Competing Financial Interests}
 %%%%%%%
-%Declare any competing financial interests
+%Declare any competing financial interests.
 %%%%%%%
+EGP has a 40\% equity stake in the ReallyGoodSimulations company, which sells molecular dynamics code.
 
 \section{Funding Information}
 %%%%%%%
