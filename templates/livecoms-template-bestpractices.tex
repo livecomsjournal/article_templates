@@ -16,6 +16,7 @@
 \usepackage{siunitx}
 \DeclareSIUnit\Molar{M}
 \newcommand{\versionnumber}{1.3}  % you should update the minor version number in preprints and major version number of submissions.
+\newcommand{\githubrepository}{\url{https://github.com/myaccount/homegithubrepository}}  %this should be the main github repository for this article
 \graphicspath{{figures/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% ARTICLE SETUP
@@ -50,7 +51,6 @@
 \begin{abstract}
 Please provide an abstract of no more than 250 words. Your abstract should explain the main contributions of your article, and should not contain any material that is not included in the main text.
 \end{abstract}
-
 
 \section{Introduction (Level 1 heading)}
 
@@ -176,7 +176,7 @@ Some filler text to sit alongside the half-width figure. \lipsum[1-2]
 \includegraphics[width=0.95\linewidth]{elife-18156-fig2}
 \caption{A very wide figure that takes up the entire page, including the gutter space.}
 \label{fig:fullwidth}
-\figsupp{There is no limit on the number of Figure Supplements for any one primary figure. Each figure supplement should be clearly labelled, Figure 1--Figure Supplement 1, Figure 1--Figure Supplement 2, Figure 2--Figure Supplement 1 and so on, and have a short title (and optional legend). Figure Supplements should be referred to in the legend of the associated primary figure, and should also be listed at the end of the article text file.}{\includegraphics[width=6cm]{frog}}
+\figsupp{There is no limit on the number of Figure Supplements for any one primary figure. Each figure supplement should be clearly labeled, Figure 1--Figure Supplement 1, Figure 1--Figure Supplement 2, Figure 2--Figure Supplement 1 and so on, and have a short title (and optional legend). Figure Supplements should be referred to in the legend of the associated primary figure, and should also be listed at the end of the article text file.}{\includegraphics[width=6cm]{frog}}
 \end{fullwidth}
 \end{figure}
 
@@ -243,12 +243,53 @@ You can make lists with automatic numbering \dots
 \item[Idea] Text
 \end{description}
 
-Some filler text, because empty templates look really poorly. \lipsum[1]
+Some filler text, because empty templates look really poor. \lipsum[1]
 
+\section{Author Contributions}
+%%%%%%%%%%%%%%%%
+% This section mustt describe the actual contributions of
+% author. Since this is an electronic-only journal, there is 
+% no length limit when you describe the authors' contributions, 
+% so we recommend describing what they actually did rather than 
+% simply categorizing them in a small number of
+% predefined roles as might be done in other journals.
+%
+% See the policies ``Policies on Authorship'' section of https://livecoms.github.io 
+% for more information on deciding on authorship and author order.
+%%%%%%%%%%%%%%%%
+FMS wrote sections X and Z. RMS contributed to the writing of sections
+Y and W.  TMP contributed to the writing of sections Y and W. ITP
+contributed to all sections.  ADP wrote sections W and Y, performed
+and analyzed the experiments in Z, made figures 4-6, and edited the
+whole manuscript as well as standardizing table formatting.
+For a more detailed description of contributions,
+see the GitHub issue tracking and changelog at \githubrepository.
 
-\section{Acknowledgments}
+\section{Other Contributions}
+%%%%%%%%%%%%%%%
+% You should include all people who have filed issues that were
+% accepted into the paper, or that upon discussion altered what was in the paper.
+% Multiple significant contributions might mean that the contributor
+% should be moved to authorship at the discretion of the a
+%
+% See the policies ``Policies on Authorship'' section of https://livecoms.github.io for
+% more information on deciding on authorship and author order.
+%%%%%%%%%%%%%%%
+EGP provided inportant insights on the challenges faced by nonequilibrium simulations.
+FTP provided several key citations on energy conservation. For a more detailed description of contributions,
+see the GitHub issue tracking and changelog at \githubrepository.
 
-Funder and other information can be given here.
+\section{Competing Financial Interests}
+%%%%%%%
+%Declare any competing financial interests.
+%%%%%%%
+EGP has a 40\% equity stake in the ReallyGoodSimulations company, which sells molecular dynamics code.
+
+\section{Funding Information}
+%%%%%%%
+% Authors should acknowledge funding sources here. Reference specific grants.
+%%%%%%%
+FMS acknowledges the support of NSF grant CHE-1111111.
 
 \nocite{*} % This command displays all refs in the bib file
 \bibliography{livecoms-sample}
