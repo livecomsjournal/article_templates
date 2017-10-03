@@ -125,6 +125,7 @@
 
 
 \RequirePackage[super,sort&compress]{natbib}
+\RequirePackage{natmove}
 \renewcommand{\bibfont}{\small}
 % modifed from https://github.com/gbhutani/vancouver_authoryear_bibstyle/
 \IfFileExists{vancouver-livecoms.bst}
