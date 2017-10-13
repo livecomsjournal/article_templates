@@ -74,11 +74,11 @@
   \setmonofont[Scale=MatchLowercase]{Latin Modern Mono}
   % xits-math is really STIX. Really.
   % https://tex.stackexchange.com/questions/227216/stix-versus-xits
-  \setmathfont[Extension = .otf, BoldFont = *bold,]{xits-math}
+  % \setmathfont[Extension = .otf, BoldFont = *bold,]{xits-math}
 \else
   \RequirePackage[T1]{fontenc}
   \RequirePackage[utf8]{inputenc}
-  \RequirePackage{stix}
+  % \RequirePackage[notext]{stix}
   \RequirePackage[default]{opensans}
   \renewcommand{\ttdefault}{lmtt}
 \fi
@@ -115,6 +115,7 @@
 
 \RequirePackage{silence}
 \WarningFilter{caption}{The option `hypcap=true' will be ignored}
+\WarningFilter{microtype}{Unknown slot}
 
 \RequirePackage[labelfont={bf},%
                 labelsep=period,%
@@ -534,6 +535,38 @@
     {\small\textbf{Table~\thetable--source data \arabic{data}.} #1}\par
   }
 }
+
+%% Checklists as floats
+\RequirePackage{amssymb}
+\RequirePackage{fontawesome}
+\DeclareFloatingEnvironment[placement=hbtp,name=Checklists]{Checklists}
+\newcounter{checklist}
+\xapptocmd{\Checklists}{%
+  \setcounter{checklist}{0}
+  \mdfsetup{skipabove=0pt,skipbelow=0pt,
+    frametitleaboveskip=12pt,innerbottommargin=12pt,
+    hidealllines=true,
+    frametitlefont=\Large\bfseries\color{LiveCoMSLightBlue}}
+}{}{}
+
+\xapptocmd{\Checklists*}{
+  \setcounter{checklist}{0}
+  \mdfsetup{skipabove=0pt,skipbelow=0pt,
+    frametitleaboveskip=12pt,innerbottommargin=12pt,
+    hidealllines=true,
+    frametitlefont=\Large\bfseries\color{LiveCoMSLightBlue}}
+}{}{}
+
+  \newenvironment{checklist}[1]{%
+    \stepcounter{checklist}
+    \ifnumodd{\thechecklist}
+      {\def\cl@bgcolor{gray!12}}
+      {\def\cl@bgcolor{gray!25}}
+    \begin{mdframed}[
+      frametitle=\MakeUppercase{#1},
+      backgroundcolor=\cl@bgcolor]
+      \setlist[itemize]{label=$\Box$,leftmargin=*}
+  }{\end{mdframed}}
 
 \AtEndDocument{%
   \closeoutputstream{suppinfo}
