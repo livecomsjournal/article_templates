@@ -99,9 +99,11 @@
 \RequirePackage{booktabs}
 \RequirePackage{authblk}
 
-\RequirePackage[left=6cm,%
-                marginparwidth=4cm,%
-                marginparsep=0.5cm,%
+% Modified page geometry for LiveComs
+\RequirePackage[%left=6cm,%
+                %marginparwidth=4cm,%
+                %marginparsep=0.5cm,%
+                left=2cm,
                 right=1.3cm,%
                 top=2cm,%
                 bottom=2.5cm,%
@@ -168,8 +170,9 @@
 \RequirePackage{fancyhdr}  % custom headers/footers
 \RequirePackage{lastpage}  % Number of pages in the document
 \pagestyle{fancy}          % Enables the custom headers/footers
-\addtolength{\headwidth}{\marginparsep}
-\addtolength{\headwidth}{\marginparwidth}
+%% Next two lines unnecessary for LiveComs
+% \addtolength{\headwidth}{\marginparsep}
+% \addtolength{\headwidth}{\marginparwidth}
 
 %% different document types listed here
 
@@ -234,7 +237,7 @@
 
 %
 % section/subsection/paragraph set-up
-%
+% Updated for LiveComs
 % \setcounter{secnumdepth}{0}
 \RequirePackage[explicit]{titlesec}
 \titleformat{\section}
@@ -270,6 +273,9 @@
 \def\@contribution{}
 \def\@presentaddress{}
 \def\@deceased{}
+% Added blurb for LiveComs
+\def\@blurb{}
+
 
 \newcommand{\corr}[2]{%
   \ifx\empty\@correspondence\else\appto{\@correspondence}{; }{}{}\fi
@@ -296,6 +302,9 @@
 
 \newcommand{\deceased}[1]{\def\@deceased{\textsuperscript{#1}Deceased}}
 
+% Added for LiveComs
+\newcommand{\blurb}[1]{\def\@blurb{#1}}
+
 \reversemarginpar
 
 %
@@ -312,13 +321,31 @@
     \ifx\empty\@contribution\else
     \bigskip\@contribution\par\fi
     \ifx\empty\@presentaddress\else
-    \bigskip\textbf{Present address: }\@presentaddress\par\fi
-    \bigskip
+    \textbf{Present address: }\@presentaddress\par\fi
     \ifx\empty\@deceased\else\@deceased\par\fi
 }
 
 \patchcmd{\@author}{\AB@authlist\\[\affilsep]\AB@affillist}{\AB@authlist\\[\affilsep]
-  \marginpar{\raggedright\footnotesize\themetadata\par}\AB@affillist}{}{}
+  %% Removed for LiveComs; will be placed after abstract in frontmatter
+  % \marginpar{\raggedright\footnotesize\themetadata\par}
+  \AB@affillist}{}{}
+
+%% Added for LiveComs
+\RequirePackage{environ}
+\RequirePackage{textpos}
+\NewEnviron{frontmatter}{%
+  \twocolumn[%
+    \protecting{%\begin{minipage}[b]{3cm}
+    % \small\itshape
+    % \raggedright\@blurb
+    % \end{minipage}
+    \hfill
+    \begin{minipage}[b]{\textwidth-4cm}
+    \BODY
+    \themetadata%
+    \end{minipage}}\vspace*{2\baselineskip}
+  ]%
+}
 
 \renewcommand{\maketitle}{%
   \vskip36pt%
@@ -330,6 +357,7 @@
 
 \renewenvironment{abstract}{%
    \setlength{\parindent}{0pt}\raggedright
+   \raisebox{-16pt-\baselineskip}[0pt][0pt]{\makebox[0pt][r]{\parbox[t]{3cm}{\raggedright\itshape\footnotesize\@blurb}\hspace*{1cm}}}%
    \textcolor{LiveCoMSMediumGrey}{\rule{\textwidth}{2pt}}
    \vskip16pt
    \textcolor{LiveCoMSLightBlue}{\large\bfseries\abstractname\space}
@@ -349,7 +377,7 @@
 % \RequirePackage[lflt]{floatflt}
 % \AtEndEnvironment{floatingfigure}{\vskip8pt\noindent\textcolor{LiveCoMSMediumGrey}{\rule{\hsize}{2pt}}}
 
-\DeclareFloatingEnvironment[placement=btp,name=Box]{featurebox}
+\DeclareFloatingEnvironment[placement=hbt,name=Box]{featurebox}
 \captionsetup[featurebox]{font={Large,bf,color=LiveCoMSDarkBlue}}
 
 \newcounter{featurefigure}
@@ -373,10 +401,29 @@
 }{}{}
 \pretocmd{\endfeaturebox}{\end{mdframed}}{}{}
 
+%% Starred version for LiveComs two-column
+\AtBeginEnvironment{featurebox*}{%
+  \setcounter{featurefigure}{0}%
+  \setcounter{featuretable}{0}%
+  \newcommand{\featurefig}[1]{%
+    \refstepcounter{featurefigure}%
+    \vskip\smallskipamount%
+    {\small\textbf{\color{eLifeDarkBlue}Box \arabic{featurebox} Figure \arabic{featurefigure}.}\space #1\par}\medskip}
+  \newcommand{\featuretable}[1]{%
+    \refstepcounter{featuretable}%
+    \vskip\smallskipamount%
+    {\small\textbf{\color{eLifeDarkBlue}Box \arabic{featurebox} Table \arabic{featuretable}.}\space #1\par}\medskip}
+}
+\expandafter\apptocmd\csname featurebox*\endcsname{%
+  \begin{mdframed}[linewidth=0pt,backgroundcolor=eLifeLightBlue!10,fontcolor=eLifeDarkBlue]
+  \if@reqslineno\addtolength{\linenumbersep}{1em}\internallinenumbers\fi%
+}{}{}
+\expandafter\pretocmd\csname endfeaturebox*\endcsname{\end{mdframed}}{}{}
 
-\newenvironment{fullwidth}{%
-  \begin{adjustwidth}{-4.5cm}{}
-}{\end{adjustwidth}}
+%% Unnecessary for LiveComs
+% \newenvironment{fullwidth}{%
+%   \begin{adjustwidth}{-4.5cm}{}
+% }{\end{adjustwidth}}
 
 \appto{\appendix}{%
   \captionsetup*[figure]{name={Appendix \arabic{appendix} Figure },font={color=LiveCoMSDarkBlue,small},skip=\smallskipamount}%
@@ -418,7 +465,41 @@
   }
 }
 
+%% Added for LiveComs (two columns)
+\AtBeginEnvironment{figure*}{%
+  \setcounter{figsupp}{0}
+  \setcounter{data}{0}
+  %% Updated 2017/06/30 to allow optional argument
+  \newcommand{\figsupp}[3][]{%
+    \refstepcounter{figsupp}%
+    {%
+    \ifstrequal{#1}{none}{}{%
+      \small\textbf{Figure~\thefigure--Figure supplement \arabic{figsupp}.} \ifstrempty{#1}{#2}{#1}}\par}
+    \addtostream{suppinfo}{%
+      \noindent\protect\begin{minipage}{\linewidth}
+      \protect #3\noexpand\par
+      \textbf{Figure \thefigure--Figure supplement \arabic{figsupp}.} #2\noexpand\par
+      \vskip8pt
+      \protect\end{minipage}
+      \vskip16pt
+    }
+  }
+  \newcommand{\figdata}[1]{%
+    \refstepcounter{data}
+    {\small\textbf{Figure~\thefigure--source data \arabic{data}.} #1}\par
+  }
+}
+
 \AtBeginEnvironment{table}{%
+  \setcounter{data}{0}
+  \newcommand{\tabledata}[1]{%
+    \refstepcounter{data}
+    {\small\textbf{Table~\thetable--source data \arabic{data}.} #1}\par
+  }
+}
+
+%% Added for LiveComs (twocolumns)
+\AtBeginEnvironment{table*}{%
   \setcounter{data}{0}
   \newcommand{\tabledata}[1]{%
     \refstepcounter{data}
@@ -444,7 +525,12 @@
   \patchcmd{\ttlf@section}{LiveCoMSMediumGrey}{LiveCoMSDarkBlue}{}{}
   \noindent{\bfseries\Large\color{LiveCoMSMediumGrey}Appendix \arabic{appendix}\par}
   \nolinenumbers%
-  \begin{mdframed}[hidealllines=true,backgroundcolor=LiveCoMSLightBlue!10,fontcolor=LiveCoMSDarkBlue,leftline=true,linecolor=LiveCoMSLightBlue,linewidth=1em]
+  %% Remove box colours for LiveComs
+  \begin{mdframed}[hidealllines=true,
+  % backgroundcolor=LiveCoMSLightBlue!10,
+  fontcolor=LiveCoMSDarkBlue,
+  % leftline=true,linecolor=LiveCoMSLightBlue,linewidth=1em
+  ]
   \if@reqslineno\addtolength{\linenumbersep}{2em}\internallinenumbers\fi
 }{%
   \end{mdframed}
