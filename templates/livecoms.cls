@@ -425,10 +425,27 @@
 %   \begin{adjustwidth}{-4.5cm}{}
 % }{\end{adjustwidth}}
 
+%% Provide support for pseudocode and algorithms
+\RequirePackage{algorithm,algpseudocode}
+\captionsetup[algorithm]{%
+   labelfont={bf},font=small,labelsep=period,
+   justification=raggedright,singlelinecheck=false}
+\newcommand\fs@notopruled{\def\@fs@cfont{\bfseries}\let\@fs@capt\floatc@ruled
+  \def\@fs@pre{}% \hrule height.8pt depth0pt \kern2pt}%
+  \def\@fs@post{} %\kern2pt\hrule\relax}%
+  \def\@fs@mid{\medskip\kern2pt\hrule\kern2pt}%
+  \let\@fs@iftopcapt\iftrue}
+\floatstyle{notopruled}
+\restylefloat{algorithm}
+\newcommand{\algorithmautorefname}{Algorithm}
+\newcommand{\ALG}[1]{\autoref{alg:#1}}
+
+%% Update some appendix sectional styles
 \appto{\appendix}{%
   \@addtoreset{figure}{section}
   \@addtoreset{table}{section}
   \@addtoreset{featurebox}{section}
+  \@addtoreset{algorithm}{section}
   % \numberwithin{figure}{section}
   % \numberwithin{table}{section}
   % \numberwithin{featurebox}{section}

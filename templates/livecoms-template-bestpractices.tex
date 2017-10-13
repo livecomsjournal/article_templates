@@ -131,7 +131,7 @@ Use section and subsection commands to organize your document. \LaTeX{} handles 
 
 Use the table and tabular commands for basic tables --- see \TABLE{example}, for example.
 
-You can upload a figure (JPEG, PNG or PDF) using the project menu. To include it in your document, use the \verb|\includegraphics| command as in the code for \FIG{view}.
+To include an image (JPEG, PNG or PDF) in your document, use the \verb|\includegraphics| command as in the code for \FIG{view}.
 
 If you use the following prefixes for your \verb|\label|:
 %
@@ -152,6 +152,27 @@ Really wide figures or tables, that take up the entire text width: use \verb|\be
 \label{fig:fullwidth}
 \figsupp{There is no limit on the number of Figure Supplements for any one primary figure. Each figure supplement should be clearly labeled, Figure 1--Figure Supplement 1, Figure 1--Figure Supplement 2, Figure 2--Figure Supplement 1 and so on, and have a short title (and optional legend). Figure Supplements should be referred to in the legend of the associated primary figure, and should also be listed at the end of the article text file.}{\includegraphics[width=6cm]{frog}}
 \end{figure*}
+
+
+\subsection{Algorithms and Pseudocode}
+
+The \texttt{algpseudocode} and \texttt{algorithms} packages is loaded by the document class. \ALG{euclid} was taken directly from the package documentation. (Please do not load \texttt{algorithm2e}; it's not compatible with \texttt{algpseudocde} nor \texttt{algorithms}!)
+
+\begin{algorithm}
+\caption{Euclid's algorithm}\label{alg:euclid}
+\begin{algorithmic}%[1]  %% uncomment to enable line numbers
+\Procedure{Euclid}{$a,b$}\Comment{The g.c.d. of a and b}
+   \State $r\gets a\bmod b$
+   \While{$r\not=0$}\Comment{We have the answer if r is 0}
+      \State $a\gets b$
+      \State $b\gets r$
+      \State $r\gets a\bmod b$
+   \EndWhile\label{euclidendwhile}
+   \State \textbf{return} $b$\Comment{The gcd is b}
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
 
 \subsection{Citations}
 
@@ -181,9 +202,9 @@ denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{
 
 \lipsum[3]
 
-\begin{figure}
+\begin{figure}[hbt!]
 \includegraphics[width=\linewidth]{elife-13214-fig7}
-\caption{A text-width example.}
+\caption{A column-width example.}
 \label{fig:view}
 %% If the optional argument in the square brackets is ``none'', then the caption *will not appear in the main figure at all* and only the full caption will appear under the supplementary figure at the end of the manuscript.
 \figsupp[Shorter caption for main text.]{This is a supplementary figure's full caption, which will be used at the end of the manuscript.}{\includegraphics[width=6cm]{frog}}
@@ -262,7 +283,7 @@ EGP has a 40\% equity stake in the ReallyGoodSimulations company, which sells mo
 %%%%%%%
 % Authors should acknowledge funding sources here. Reference specific grants.
 %%%%%%%
-FMS acknowledges the support of NSF grant CHE-1111111. \FIG{app}
+FMS acknowledges the support of NSF grant CHE-1111111.
 
 \nocite{*} % This command displays all refs in the bib file
 \bibliography{livecoms-sample}
@@ -272,15 +293,13 @@ FMS acknowledges the support of NSF grant CHE-1111111. \FIG{app}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \appendix
-% \begin{appendixbox}
-% \label{first:app}
-\section{Firstly}
+
+\section{Firstly}\label{first:app}
 \lipsum[1]
 
-%% Sadly, we can't use floats in the appendix boxes. So they don't ``float'', but use \captionof{figure}{...} and \captionof{table}{...} to get them properly caption.
-\begin{figure}[hbt!]
+\begin{figure}[bt!]
 \centering
-\includegraphics[width=\linewidth,height=7cm]{frog}
+\includegraphics[width=\linewidth,height=5cm]{frog}
 \caption{This is a figure in the appendix}
 \label{fig:app}
 \end{figure}
@@ -291,17 +310,14 @@ FMS acknowledges the support of NSF grant CHE-1111111. \FIG{app}
 
 \begin{figure}[hbt!]
 \centering
-\includegraphics[width=\linewidth,height=7cm]{frog}
+\includegraphics[width=\linewidth,height=5cm]{frog}
 \caption{This is a figure in the appendix}
 \end{figure}
 
-% \end{appendixbox}
-
-% \begin{appendixbox}
 \begin{figure}[hbt!]
 \centering
 \includegraphics[width=\linewidth,height=7cm]{frog}
 \caption{This is a figure in the appendix}
 \end{figure}
-% \end{appendixbox}
+
 \end{document}
