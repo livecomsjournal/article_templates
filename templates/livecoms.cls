@@ -426,8 +426,19 @@
 % }{\end{adjustwidth}}
 
 \appto{\appendix}{%
-  \captionsetup*[figure]{name={Appendix \arabic{appendix} Figure },font={color=LiveCoMSDarkBlue,small},skip=\smallskipamount}%
-  \captionsetup*[table]{name={Appendix \arabic{appendix} Table },font={color=LiveCoMSDarkBlue,small}}%
+  \@addtoreset{figure}{section}
+  \@addtoreset{table}{section}
+  \@addtoreset{featurebox}{section}
+  % \numberwithin{figure}{section}
+  % \numberwithin{table}{section}
+  % \numberwithin{featurebox}{section}
+  \titleformat{\section}
+    {\LARGE\bfseries\color{LiveCoMSDarkBlue}}
+    {\appendixname\ \thesection}{1em}{#1}[]
+
+  \captionsetup*[figure]{name={Appendix \thesection\ Figure },font={color=LiveCoMSDarkBlue,small},skip=\smallskipamount}%
+
+  \captionsetup*[table]{name={Appendix \thesection\ Table },font={color=LiveCoMSDarkBlue,small}}%
 }
 
 \newcounter{figsupp}
@@ -515,26 +526,27 @@
   \input{\jobname.suppinfo}
 }
 
-\newcounter{appendix}
-\setcounter{appendix}{0}
-\newenvironment{appendixbox}{%
-  \setcounter{figure}{0}
-  \setcounter{table}{0}
-  \refstepcounter{appendix}%
-  \clearpage%
-  \patchcmd{\ttlf@section}{LiveCoMSMediumGrey}{LiveCoMSDarkBlue}{}{}
-  \noindent{\bfseries\Large\color{LiveCoMSMediumGrey}Appendix \arabic{appendix}\par}
-  \nolinenumbers%
-  %% Remove box colours for LiveComs
-  \begin{mdframed}[hidealllines=true,
-  % backgroundcolor=LiveCoMSLightBlue!10,
-  fontcolor=LiveCoMSDarkBlue,
-  % leftline=true,linecolor=LiveCoMSLightBlue,linewidth=1em
-  ]
-  \if@reqslineno\addtolength{\linenumbersep}{2em}\internallinenumbers\fi
-}{%
-  \end{mdframed}
-}
+%% Use more traditional Appendix section approach
+% \newcounter{appendix}
+% \setcounter{appendix}{0}
+% \newenvironment{appendixbox}{%
+%   \setcounter{figure}{0}
+%   \setcounter{table}{0}
+%   \refstepcounter{appendix}%
+%   \clearpage%
+%   \patchcmd{\ttlf@section}{LiveCoMSMediumGrey}{LiveCoMSDarkBlue}{}{}
+%   \noindent{\bfseries\Large\color{LiveCoMSMediumGrey}Appendix \arabic{appendix}\par}
+%   \nolinenumbers%
+%   %% Remove box colours for LiveComs
+%   \begin{mdframed}[hidealllines=true,
+%   % backgroundcolor=LiveCoMSLightBlue!10,
+%   fontcolor=LiveCoMSDarkBlue,
+%   % leftline=true,linecolor=LiveCoMSLightBlue,linewidth=1em
+%   ]
+%   \if@reqslineno\addtolength{\linenumbersep}{2em}\internallinenumbers\fi
+% }{%
+%   \end{mdframed}
+% }
 
 \RequirePackage[colorlinks=true,allcolors=black,citecolor=LiveCoMSMediumGrey,linkcolor=LiveCoMSMediumGrey,urlcolor=LiveCoMSLightBlue]{hyperref}
 \urlstyle{sf}

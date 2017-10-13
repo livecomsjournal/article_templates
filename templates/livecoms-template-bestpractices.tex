@@ -262,7 +262,7 @@ EGP has a 40\% equity stake in the ReallyGoodSimulations company, which sells mo
 %%%%%%%
 % Authors should acknowledge funding sources here. Reference specific grants.
 %%%%%%%
-FMS acknowledges the support of NSF grant CHE-1111111.
+FMS acknowledges the support of NSF grant CHE-1111111. \FIG{app}
 
 \nocite{*} % This command displays all refs in the bib file
 \bibliography{livecoms-sample}
@@ -272,30 +272,36 @@ FMS acknowledges the support of NSF grant CHE-1111111.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \appendix
-\begin{appendixbox}
-\label{first:app}
+% \begin{appendixbox}
+% \label{first:app}
 \section{Firstly}
 \lipsum[1]
 
 %% Sadly, we can't use floats in the appendix boxes. So they don't ``float'', but use \captionof{figure}{...} and \captionof{table}{...} to get them properly caption.
-\begin{center}
+\begin{figure}[hbt!]
+\centering
 \includegraphics[width=\linewidth,height=7cm]{frog}
-\captionof{figure}{This is a figure in the appendix}
-\end{center}
+\caption{This is a figure in the appendix}
+\label{fig:app}
+\end{figure}
 
 \section{Secondly}
 
 \lipsum[5-8]
 
-\begin{center}
+\begin{figure}[hbt!]
+\centering
 \includegraphics[width=\linewidth,height=7cm]{frog}
-\captionof{figure}{This is a figure in the appendix}
-\end{center}
+\caption{This is a figure in the appendix}
+\end{figure}
 
-\end{appendixbox}
+% \end{appendixbox}
 
-\begin{appendixbox}
+% \begin{appendixbox}
+\begin{figure}[hbt!]
+\centering
 \includegraphics[width=\linewidth,height=7cm]{frog}
-\captionof{figure}{This is a figure in the appendix}
-\end{appendixbox}
+\caption{This is a figure in the appendix}
+\end{figure}
+% \end{appendixbox}
 \end{document}
