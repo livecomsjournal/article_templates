@@ -2,7 +2,7 @@
 %
 % adapted from elife template, v1.4
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{livecoms}[2017/08/10, v0.5]
+\ProvidesClass{livecoms}[2017/08/10, v0.5...]
 
 \RequirePackage[english]{babel}
 
@@ -75,7 +75,7 @@
   % xits-math is really STIX. Really.
   % https://tex.stackexchange.com/questions/227216/stix-versus-xits
   \setmathfont[Extension = .otf, BoldFont = *bold,]{xits-math}
-\else  
+\else
   \RequirePackage[T1]{fontenc}
   \RequirePackage[utf8]{inputenc}
   \RequirePackage{stix}
@@ -235,25 +235,25 @@
 %
 % section/subsection/paragraph set-up
 %
-\setcounter{secnumdepth}{0}
+% \setcounter{secnumdepth}{0}
 \RequirePackage[explicit]{titlesec}
 \titleformat{\section}
-  {\color{LiveCoMSMediumGrey}\Large\bfseries}
-  {\thesection}{}{#1}[]
+  {\LARGE\bfseries}
+  {\thesection}{1em}{#1}[]
 \titleformat{\subsection}
-  {\large\bfseries}
-  {\thesubsection}{}{#1}[]
+  {\Large\bfseries\color{LiveCoMSMediumGrey}}
+  {\thesubsection}{1em}{#1}[]
 \titleformat{\subsubsection}
-  {\large}
-  {\thesubsubsection}{}{#1}[]    
+  {\large\color{LiveCoMSMediumGrey}}
+  {\thesubsubsection}{1em}{#1}[]
 \titleformat{\paragraph}
-  {\color{LiveCoMSMediumGrey}\large}
-  {\theparagraph}{}{#1}[] 
+  {\large\color{LiveCoMSMediumGrey}}
+  {\theparagraph}{1em}{#1}[]
 \titlespacing*{\section}{0pc}{3ex \@plus4pt \@minus3pt}{0pt}
 \titlespacing*{\subsection}{0pc}{2.5ex \@plus3pt \@minus2pt}{0pt}
 \titlespacing*{\subsubsection}{0pc}{2ex \@plus2.5pt \@minus1.5pt}{0pt}
 \titlespacing*{\paragraph}{0pc}{1.5ex \@plus2pt \@minus1pt}{0pt}
-  
+
 \RequirePackage{enumitem}
 \setlist{noitemsep}
 
@@ -299,7 +299,7 @@
 \reversemarginpar
 
 %
-% custom title page 
+% custom title page
 %
 \renewcommand{\Authfont}{\bfseries\large\raggedright}
 \renewcommand{\Affilfont}{\mdseries\large\raggedright}
@@ -317,7 +317,7 @@
     \ifx\empty\@deceased\else\@deceased\par\fi
 }
 
-\patchcmd{\@author}{\AB@authlist\\[\affilsep]\AB@affillist}{\AB@authlist\\[\affilsep] 
+\patchcmd{\@author}{\AB@authlist\\[\affilsep]\AB@affillist}{\AB@authlist\\[\affilsep]
   \marginpar{\raggedright\footnotesize\themetadata\par}\AB@affillist}{}{}
 
 \renewcommand{\maketitle}{%
@@ -333,7 +333,7 @@
    \textcolor{LiveCoMSMediumGrey}{\rule{\textwidth}{2pt}}
    \vskip16pt
    \textcolor{LiveCoMSLightBlue}{\large\bfseries\abstractname\space}
-}{%   
+}{%
    \vskip8pt
    \textcolor{LiveCoMSMediumGrey}{\rule{\textwidth}{2pt}}
    \vskip16pt
