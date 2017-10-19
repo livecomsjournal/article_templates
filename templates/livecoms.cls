@@ -57,13 +57,14 @@
 \LoadClass{extarticle}
 
 \RequirePackage{amsmath}
+\RequirePackage{amssymb}
 \RequirePackage{mdframed}
 
 \RequirePackage{lineno}
 \if@reqslineno\linenumbers\fi
 
 \ifxetexorluatex
-  \RequirePackage{unicode-math}
+  \RequirePackage[no-math]{fontspec}
   \setmainfont[Ligatures = TeX,
   Extension = .ttf,
   UprightFont = *-Regular,
@@ -71,14 +72,9 @@
   ItalicFont = *-Italic,
   BoldItalicFont = *-BoldItalic]
   {OpenSans}
-  \setmonofont[Scale=MatchLowercase]{Latin Modern Mono}
-  % xits-math is really STIX. Really.
-  % https://tex.stackexchange.com/questions/227216/stix-versus-xits
-  % \setmathfont[Extension = .otf, BoldFont = *bold,]{xits-math}
 \else
   \RequirePackage[T1]{fontenc}
   \RequirePackage[utf8]{inputenc}
-  % \RequirePackage[notext]{stix}
   \RequirePackage[default]{opensans}
   \renewcommand{\ttdefault}{lmtt}
 \fi
@@ -537,7 +533,6 @@
 }
 
 %% Checklists as floats
-\RequirePackage{amssymb}
 \RequirePackage{fontawesome}
 \DeclareFloatingEnvironment[placement=hbtp,name=Checklists]{Checklists}
 \newcounter{checklist}
