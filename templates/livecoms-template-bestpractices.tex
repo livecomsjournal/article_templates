@@ -53,15 +53,22 @@
 
 \begin{abstract}
 Please provide an abstract of no more than 250 words. Your abstract should explain the main contributions of your article, and should not contain any material that is not included in the main text.
+Please note that your abstract, plus the authorship material following it, must not extend beyond the title page or modifications to the LaTeX class will likely be needed.
 \end{abstract}
 
 \end{frontmatter}
 
 
+% This provides a checklist which
+% - spans a full page
+% - consists of multiple sub-checklists
+% - exists on a separate page
+% This style of checklist will be especially helpful if you want to encourage readers to print and use your checklist in practice, as they
+% can easily print it without also printing other material from your manuscript. However, other styles of checklist are also possible (below).
 \begin{Checklists*}[p!]
 
 \begin{checklist}{First list}
-\textbf{This is some further description.}
+\textbf{You can easily make full width checklists that take a whole page}
 \begin{itemize}
 \item First thing let's do an item which breaks across lines to see how that looks
 \item Also remember
@@ -97,6 +104,58 @@ Please provide an abstract of no more than 250 words. Your abstract should expla
 \end{checklist}
 
 \end{Checklists*}
+
+% This provides a checklist which is shorter but still
+% - spans a full page
+% - consists of multiple sub-checklists
+% This does not exist on its own page
+\begin{Checklists*}[h]
+
+\begin{checklist}{Fifth list}
+\textbf{Full-width checklists on less than a single page are also possible}
+\begin{itemize}
+\item First thing let's do an item which breaks across lines to see how that looks
+\item Also remember
+\item And finally
+\end{itemize}
+\end{checklist}
+
+\begin{checklist}{Sixth list}
+\textbf{This is some further description.}
+\begin{itemize}
+\item First thing
+\item Also remember
+\item And finally
+\end{itemize}
+\end{checklist}
+
+\end{Checklists*}
+
+
+
+% Here is a single-column checklist that consists of multiple sub-checklists
+\begin{Checklists}
+
+\begin{checklist}{Seventh list}
+\textbf{Single-column checklists are also straightforward by removing the asterisk}
+\begin{itemize}
+\item First thing let's do an item which breaks across lines to see how that looks
+\item Also remember
+\item And finally
+\end{itemize}
+\end{checklist}
+
+\begin{checklist}{Eighth list}
+\textbf{This is some further description.}
+\begin{itemize}
+\item First thing
+\item Also remember
+\item And finally
+\end{itemize}
+\end{checklist}
+
+\end{Checklists}
+
 
 
 \section{Introduction (Level 1 heading)}
