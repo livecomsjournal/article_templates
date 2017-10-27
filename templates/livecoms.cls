@@ -218,8 +218,8 @@
 % nothing
 \fi
 
-\ifdocumenttype
 \fancyhf{}
+\ifdocumenttype
 \chead{%
 \setlength{\fboxsep}{3pt}
 \colorbox{LiveCoMSMediumGrey}{\begin{minipage}{\headwidth}\centering\color{white} A LiveCoMS \documenttype\end{minipage}}%
