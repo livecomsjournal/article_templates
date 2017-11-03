@@ -593,7 +593,7 @@
 %   \end{mdframed}
 % }
 
-\RequirePackage[colorlinks=true,allcolors=black,citecolor=LiveCoMSMediumGrey,linkcolor=LiveCoMSMediumGrey,urlcolor=LiveCoMSLightBlue]{hyperref}
+\RequirePackage[colorlinks=true,allcolors=black,citecolor=LiveCoMSLightBlue,linkcolor=LiveCoMSMediumGrey,urlcolor=LiveCoMSLightBlue]{hyperref}
 \urlstyle{sf}
 
 % Other desired commands
