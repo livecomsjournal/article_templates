@@ -123,7 +123,7 @@
 % \captionsetup*[table]{skip=\medskipamount}
 
 
-\RequirePackage[super,sort&compress]{natbib}
+\RequirePackage[square,numbers,sort&compress]{natbib}
 \RequirePackage{natmove}
 \renewcommand{\bibfont}{\small}
 % modifed from https://github.com/gbhutani/vancouver_authoryear_bibstyle/
@@ -593,7 +593,7 @@
 %   \end{mdframed}
 % }
 
-\RequirePackage[colorlinks=true,allcolors=black,citecolor=LiveCoMSMediumGrey,linkcolor=LiveCoMSMediumGrey,urlcolor=LiveCoMSLightBlue]{hyperref}
+\RequirePackage[colorlinks=true,allcolors=black,citecolor=LiveCoMSLightBlue,linkcolor=LiveCoMSMediumGrey,urlcolor=LiveCoMSLightBlue]{hyperref}
 \urlstyle{sf}
 
 % Other desired commands
