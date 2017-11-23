@@ -10,9 +10,9 @@
 
 ## Description of files.
 This repository provides LaTeX templates to prepare articles for LiveCoMS.
-Our templates are adapted from the eLife Overleaf templates (v1.4). 
+Our templates are adapted from the eLife Overleaf templates (v1.4).
 
-The `templates` directory provides our template files, including a LaTeX template `.tex` (which itself provides an example, including text and figures) for each article type, a bibliography style file (`livecoms-vancouver.bst`), and a class file (`livecoms.cls`). 
+The `templates` directory provides our template files, including a LaTeX template `.tex` (which itself provides an example, including text and figures) for each article type, a bibliography style file (`livecoms-vancouver.bst`), and a class file (`livecoms.cls`).
 
 ## Using LiveCoMS templates for your own living document
 
@@ -29,6 +29,16 @@ The `templates` directory provides our template files, including a LaTeX templat
 * Check out the [Information for Authors](information_for_authors.md) for more tips and tricks for getting started with [LaTeX](https://www.latex-project.org/) and [GitHub](https://github.com).
 
 * Start writing and invite collaborators!
+
+### LaTeX Requirements
+
+Our templates require a relatively recent LaTeX installation and have been tested with these versions and others:
+- MacTex 2017
+- XeLaTeX
+- LuaLaTeX
+- TeXLive2016/2017
+
+There are known compatibility issues with TeXLive 2015.
 
 ## Acknowledgments
 We are particularly grateful to eLife for providing the excellent LaTeX template (under the CC-BY license) which provided the starting point for LiveCoMS' templates, and to [LianTze Lim](https://github.com/liantze) ([http://liantze.penguinattack.org](http://liantze.penguinattack.org)) who provided support in adapting the class file and template from eLife v 1.4.
