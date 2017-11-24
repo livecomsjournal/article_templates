@@ -3,7 +3,7 @@
 %%% ADAPTED FROM ELIFE ARTICLE TEMPLATE (8/10/2017)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PREAMBLE
-\documentclass[9pt,bestpractices]{livecoms}
+\documentclass[9pt,lessons]{livecoms}
 % Use the 'onehalfspacing' option for 1.5 line spacing
 % Use the 'doublespacing' option for 2.0 line spacing
 % Use the 'lineno' option for adding line numbers.
@@ -58,7 +58,8 @@
 \maketitle
 
 \begin{abstract}
-This particular document provides a skeleton illustrating key sections for a Best Practices document. Please see the sample \texttt{sample-document.tex} in \url{github.com/livecomsjournal/article_templates/templates} for additional information on and examples of using the LiveCoMS LaTeX class.
+This particular document provides a skeleton illustrating key sections for a Lessons Learned document.
+Please see the sample \texttt{sample-document.tex} in \url{github.com/livecomsjournal/article_templates/templates} for additional information on and examples of using the LiveCoMS LaTeX class.
 Here we also assume familiarity with LaTeX and knowledge of how to include figures, tables, etc.; if you want examples, see the sample just referenced.
 
 In your work, in this particular slot, please provide an abstract of no more than 250 words.
@@ -74,100 +75,34 @@ Please note that your abstract, plus the authorship material following it, must 
 \section{Introduction}
 
 Here you would explain what problem you are tackling and briefly motivate your work.
+Since a Lessons Learned document provides negative results in a particular category, you will want to clearly define your category and also motivate the application of your work to your particular problem.
+
+We suggest that you envision your document potentially extending in the future to include other Lessons Learned in the same category, so you may want to organize your work in a way which would allow this type of extension (e.g. providing a general introduction then using subsections to explain your particular problem) -- for example, describing potential of mean force calculations generally, then in a subsection motivating your particular application of them.
 
 In this particular template, we have removed most of the usage examples which occur in \texttt{sample-document.tex} to provide a minimal template you can modify; however, we retain a couple of examples illustrating more unusual features of our templates/article class, such as the checklists, and information on algorithms and pseudocode.
 
-\section{Prerequisites}
+A Lessons Learned document is a regular scientific article, and should be prepared with similar organization.
+Sample typical section headers follow.
 
-Here you would identify prerequisites/background knowledge that are assumed by your work and your checklist which you view as critical, ideally giving links to good sources on these topics.
-Checklists are normally focused on errors made by users with training and experience in molecular simulations, so you can assume a basic familiarity with the fundamentals of molecular simulations.
+\section{Theory and Methods}
 
-\section{Checklist}
-Here we use a full-page checklist with multiple sections, so it will appear on a separate page of the sample PDF.
-Other checklist formats are possible, as shown in the sample \texttt{sample-document.tex} in \url{github.com/livecomsjournal/article_templates/templates}.
+You should use a section (or separate sections, if this yields better organization) to describe the theory and methods relevant to your work.
 
-Your checklist should include a succinct list of steps that people should follow when carrying out the task in question.
-This is provided to ensure certain basic standards are followed and common but critical major errors are avoided.
-Note that a checklist is not intended to cover \emph{all} important steps, but rather focus on the most common reasons for failure or incorrect results, or issues which are particularly crucial.
+This should include all information required for a reader to reproduce the results, including software version numbers and links to any in-house files or scripts
 
+\section{Results}
 
-% This provides a checklist which
-% - spans a full page
-% - consists of multiple sub-checklists
-% - exists on a separate page
-% This style of checklist will be especially helpful if you want to encourage readers to print and use your checklist in practice, as they
-% can easily print it without also printing other material from your manuscript. However, other styles of checklist are also possible (below).
-\begin{Checklists*}[p!]
+You would give your results here.
+Since the goal here is not just to present negative results, but also to provide lessons learned from doing so, you will want to make sure you have data to show why your approach failed.
 
-\begin{checklist}{First list}
-\textbf{You can easily make full width checklists that take a whole page}
-\begin{itemize}
-\item Items in your checklist can and should reference sections where the cited issues are discussed in detail, such as Section~\ref{sec:reference_this}
-\item Also remember
-\item And finally
-\end{itemize}
-\end{checklist}
+\section{Discussion}
 
-\begin{checklist}{Second list}
-\textbf{This is some further description.}
-\begin{itemize}
-\item First thing
-\item Also remember
-\item And finally
-\end{itemize}
-\end{checklist}
+Discussion should highlight the lessons learned and give tips for avoiding future mistakes.
+Try to tell readers what you wish you had known before starting.
 
-\begin{checklist}{Third list}
-\textbf{This is some further description.}
-\begin{itemize}
-\item First thing
-\item Also remember
-\item And finally
-\end{itemize}
-\end{checklist}
+\section{Conclusions}
 
-\begin{checklist}{Fourth list}
-\textbf{This is some further description.}
-\begin{itemize}
-\item First thing
-\item Also remember
-\item And finally
-\end{itemize}
-\end{checklist}
-
-\end{Checklists*}
-
-
-
-
-
-\section{Rationale}
-
-Your Rationale section, or sections, can follow or precede your checklist (we expect that often, following the checklist will be preferable) and provide the necessary rationale for the checklist, and act as more complete \emph{best practices} description.
-This should include 1) significant detail as to the possible alternative ways to accomplish a given task, 2) description of advantages and disadvantages of the various approaches, and 3) significant literature documentation about reasons for choices.
-
-\subsection{Algorithms and Pseudocode}
-\label{sec:reference_this}
-
-The \texttt{algpseudocode} and \texttt{algorithms} packages is loaded by the document class. \ALG{euclid} was taken directly from the package documentation. (Please do not load \texttt{algorithm2e}; it's not compatible with \texttt{algpseudocde} nor \texttt{algorithms}!)
-
-\begin{algorithm}
-\caption{Euclid's algorithm}\label{alg:euclid}
-\begin{algorithmic}%[1]  %% uncomment to enable line numbers
-\Procedure{Euclid}{$a,b$}\Comment{The g.c.d. of a and b}
-   \State $r\gets a\bmod b$
-   \While{$r\not=0$}\Comment{We have the answer if r is 0}
-      \State $a\gets b$
-      \State $b\gets r$
-      \State $r\gets a\bmod b$
-   \EndWhile\label{euclidendwhile}
-   \State \textbf{return} $b$\Comment{The gcd is b}
-\EndProcedure
-\end{algorithmic}
-\end{algorithm}
-
-
-
+Give conclusions.
 
 
 \section{Author Contributions}
