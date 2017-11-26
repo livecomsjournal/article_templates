@@ -20,15 +20,17 @@ The `templates` directory provides our template files, including a LaTeX templat
 
 * To get started with our template, clone [this repository](https://github.com/livecomsjournal/article_templates) or click the "clone or download button" and download and unzip the a `.zip file`.
 
-* Navigate to the `templates` directory, pick your article type `.tex` file, rename this file to match the name your want, and delete the other `.tex` and `.pdf` files (though you may wish to save the sample files (`sample-document.pdf` and `sample-document.tex`) for reference).  Rename the `templates` directory to a name of your choice.
+* Make a new directory somewhere which will contain the contents of the new GitHub repository you are about to create; for now let's call this `mydirectory`.
 
-* Edit `your.README.md` to be suitable for your document, move it to `README.md`.
+* In the copy of this repository you just obtained by downloading or cloning (`article_templates`), copy the files you need to your new directory `mydirectory`. Specifically, navigate to the `templates` directory, pick your article type `.tex` file, rename this file to match the name your want, and copy it to `mydirectory` along with the `.cls` and `.bst` there. Also copy `LICENSE`, `your.README.md`, and `information_for_authors.md`.
 
-* If you wish to choose a different license, replace `LICENSE` (a CC-BY license, which we recommend) with a license of your choosing.
+* Navigate to `mydirectory` and edit `your.README.md` to be suitable for your document, renaming it to `README.md`.
 
-* Follow the directions to [create a new repository on your own GitHub account](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) with your new files.
+* If you wish to choose a different license for your work, replace `LICENSE` (a CC-BY license, which we recommend) with a license of your choosing, though we recommend reading [this analysis](http://openaccess.ox.ac.uk/2013/06/13/cc-by-what-does-it-mean-for-scholarly-articles-3/) if you are reluctant about CC-BY; our perspective is that to reach the broadest possible audience while getting maximal credit for your work, you want a license very similar to CC-BY if at all possible.
 
-* Check out the [Information for Authors](information_for_authors.md) for more tips and tricks for getting started with [LaTeX](https://www.latex-project.org/) and [GitHub](https://github.com).
+* Follow the directions to [create a new repository on your own GitHub account](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) with your new files in `mydirectory`.
+
+* Check out the [Information for Authors](information_for_authors.md) for more tips and tricks for getting started with [LaTeX](https://www.latex-project.org/) and [GitHub](https://github.com); ideally you would preserve and update this to be suitable for your work along with your GitHub repo, but this is up to you.
 
 * Start writing and invite collaborators!
 
