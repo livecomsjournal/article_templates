@@ -1,5 +1,6 @@
 # Best Practices for Doing Something Very Important
 
+(Edit the title above to describe your article/repository.)
 Here you can put a brief explanation of what the focus is in this document.
 The document is written [Markdown](https://guides.github.com/features/mastering-markdown/),
 which provides substantial control over the formatting.
@@ -37,7 +38,3 @@ This paper is being developed as a living document, open to changes from the com
 - 1 May 2017: Made it lots, lots, better.
 - 12 April 2017: added information on best practices use of gamma radiation.
 - 1 April 2017: Started document
-
-
- LocalWords:  Markdown FL Rosalind UK NJ Avengers Wynne GitHub LiveCoMS EMH IA
- LocalWords:  chemRxiv Changelog

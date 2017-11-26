@@ -3,7 +3,7 @@
 %%% ADAPTED FROM ELIFE ARTICLE TEMPLATE (8/10/2017)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PREAMBLE
-\documentclass[9pt,bestpractices]{livecoms}
+\documentclass[9pt,comparison]{livecoms}
 % Use the 'onehalfspacing' option for 1.5 line spacing
 % Use the 'doublespacing' option for 2.0 line spacing
 % Use the 'lineno' option for adding line numbers.
@@ -58,7 +58,8 @@
 \maketitle
 
 \begin{abstract}
-This particular document provides a skeleton illustrating key sections for a Best Practices document. Please see the sample \texttt{sample-document.tex} in \url{github.com/livecomsjournal/article_templates/templates} for additional information on and examples of using the LiveCoMS LaTeX class.
+This particular document provides a skeleton illustrating key sections for a Computational Comparisons document.
+Please see the sample \texttt{sample-document.tex} in \url{github.com/livecomsjournal/article_templates/templates} for additional information on and examples of using the LiveCoMS LaTeX class.
 Here we also assume familiarity with LaTeX and knowledge of how to include figures, tables, etc.; if you want examples, see the sample just referenced.
 
 In your work, in this particular slot, please provide an abstract of no more than 250 words.
@@ -73,100 +74,45 @@ Please note that your abstract, plus the authorship material following it, must 
 
 \section{Introduction}
 
-Here you would explain what problem you are tackling and briefly motivate your work.
+Here you would explain what problem you are tackling and briefly motivate your work; why is a comparison needed here?
+What do the tools you are comparing do?
 
-In this particular template, we have removed most of the usage examples which occur in \texttt{sample-document.tex} to provide a minimal template you can modify; however, we retain a couple of examples illustrating more unusual features of our templates/article class, such as the checklists, and information on algorithms and pseudocode.
+In this particular template, we have removed most of the usage examples which occur in \texttt{sample-document.tex} to provide a minimal template you can modify but we retain an example on algorithms and pseudocode.
 
-\section{Prerequisites}
+\section{Methodology}
 
-Here you would identify prerequisites/background knowledge that are assumed by your work and your checklist which you view as critical, ideally giving links to good sources on these topics.
-Checklists are normally focused on errors made by users with training and experience in molecular simulations, so you can assume a basic familiarity with the fundamentals of molecular simulations.
+Here (and in other sections if needed) you would describe how you compared the software in question, with subsections as needed.
+Perhaps you may also need to comment here on why you did not include certain pieces of software or how these might be included in the future.
 
-\section{Checklist}
-Here we use a full-page checklist with multiple sections, so it will appear on a separate page of the sample PDF.
-Other checklist formats are possible, as shown in the sample \texttt{sample-document.tex} in \url{github.com/livecomsjournal/article_templates/templates}.
+\subsection{Physical systems and properties}
 
-Your checklist should include a succinct list of steps that people should follow when carrying out the task in question.
-This is provided to ensure certain basic standards are followed and common but critical major errors are avoided.
-Note that a checklist is not intended to cover \emph{all} important steps, but rather focus on the most common reasons for failure or incorrect results, or issues which are particularly crucial.
+What did you calculate, on what systems? Why did you make that choice?
 
-
-% This provides a checklist which
-% - spans a full page
-% - consists of multiple sub-checklists
-% - exists on a separate page
-% This style of checklist will be especially helpful if you want to encourage readers to print and use your checklist in practice, as they
-% can easily print it without also printing other material from your manuscript. However, other styles of checklist are also possible (below).
-\begin{Checklists*}[p!]
-
-\begin{checklist}{First list}
-\textbf{You can easily make full width checklists that take a whole page}
-\begin{itemize}
-\item Items in your checklist can and should reference sections where the cited issues are discussed in detail, such as Section~\ref{sec:reference_this}
-\item Also remember
-\item And finally
-\end{itemize}
-\end{checklist}
-
-\begin{checklist}{Second list}
-\textbf{This is some further description.}
-\begin{itemize}
-\item First thing
-\item Also remember
-\item And finally
-\end{itemize}
-\end{checklist}
-
-\begin{checklist}{Third list}
-\textbf{This is some further description.}
-\begin{itemize}
-\item First thing
-\item Also remember
-\item And finally
-\end{itemize}
-\end{checklist}
-
-\begin{checklist}{Fourth list}
-\textbf{This is some further description.}
-\begin{itemize}
-\item First thing
-\item Also remember
-\item And finally
-\end{itemize}
-\end{checklist}
-
-\end{Checklists*}
+\subsection{Methodology for comparison}
+How did you compute what you're comparing? 
+What software versions did you use?
+How would the software be accessed?
 
 
+\subsubsection{Method selection}
+How did you select which protocols to use? How are you certain these are representative? Would a naive user get similar performance? 
+
+\subsubsection{Supporting files}
+Are there run scripts or files others would need to reproduce your work? Are these provided in your GitHub repo, or how would they be accessed? 
+How exactly would someone reproduce/extend this work?
+
+\subsubsection{Error analysis}
+You may wish to devote particular attention to error analysis.
 
 
+\section{Results}
 
-\section{Rationale}
-
-Your Rationale section, or sections, can follow or precede your checklist (we expect that often, following the checklist will be preferable) and provide the necessary rationale for the checklist, and act as more complete \emph{best practices} description.
-This should include 1) significant detail as to the possible alternative ways to accomplish a given task, 2) description of advantages and disadvantages of the various approaches, and 3) significant literature documentation about reasons for choices.
-
-\subsection{Algorithms and Pseudocode}
-\label{sec:reference_this}
-
-The \texttt{algpseudocode} and \texttt{algorithms} packages is loaded by the document class. \ALG{euclid} was taken directly from the package documentation. (Please do not load \texttt{algorithm2e}; it's not compatible with \texttt{algpseudocde} nor \texttt{algorithms}!)
-
-\begin{algorithm}
-\caption{Euclid's algorithm}\label{alg:euclid}
-\begin{algorithmic}%[1]  %% uncomment to enable line numbers
-\Procedure{Euclid}{$a,b$}\Comment{The g.c.d. of a and b}
-   \State $r\gets a\bmod b$
-   \While{$r\not=0$}\Comment{We have the answer if r is 0}
-      \State $a\gets b$
-      \State $b\gets r$
-      \State $r\gets a\bmod b$
-   \EndWhile\label{euclidendwhile}
-   \State \textbf{return} $b$\Comment{The gcd is b}
-\EndProcedure
-\end{algorithmic}
-\end{algorithm}
+You would give results.
 
 
+\section{Discussion and conclusions}
+
+You may perhaps wish to revisit the issue of what performance a naive user might expect, here.
 
 
 
