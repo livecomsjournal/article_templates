@@ -115,7 +115,7 @@
 
 \RequirePackage[labelfont={bf},%
                 labelsep=period,%
-                justification=raggedright,%
+                justification=justified,%
                 singlelinecheck=false,%
                 tableposition=top,font=small]
                 {caption}
