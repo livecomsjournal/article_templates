@@ -341,7 +341,7 @@
 \NewEnviron{frontmatter}{%
   %% Define abstract's behavior when placed in frontmatter
   \renewenvironment{abstract}{%
-     \setlength{\parindent}{0pt}\raggedright
+     \setlength{\parindent}{0pt} %\raggedright
      \raisebox{-16pt-\baselineskip}[0pt][0pt]{\makebox[0pt][r]{\parbox[t]{3cm}{%
        \raggedright\itshape\footnotesize\@blurb\par\medskip%
        This version dated \@date%
