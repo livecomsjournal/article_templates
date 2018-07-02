@@ -1629,8 +1629,8 @@ FUNCTION {techreport}
   format.institution.address output
   format.date "year" output.check
 %  format.tr.number output.nonnull
-%  new.block
-%  format.note output
+  new.block
+  format.note output
 %  output.web.refs  % urlbst
   fin.entry
 }
