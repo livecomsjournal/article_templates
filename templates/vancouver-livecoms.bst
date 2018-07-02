@@ -1012,7 +1012,9 @@ FUNCTION {word.in}
 
 FUNCTION {format.journal.date}
 {
-  month "month" bibinfo.check
+  %month "month" bibinfo.check  %% removed to suppress month
+  no.blank.or.punct  %% added to achieve proper ordering (journal name. Year ; ...)
+  ""
   duplicate$ empty$
   year  "year"  bibinfo.check duplicate$ empty$
     {
