@@ -879,12 +879,15 @@ FUNCTION {format.inventors}
 
 FUNCTION {format.note}
 {
-  url empty$
-    'skip$
-    { "\urlprefix\url{" url * "}" * output }
-  if$
+  %%url empty$
+  %%  'skip$
+  %%  { "\urlprefix\url{" url * "}" * output }
+  %%if$
   doi empty$
-    'skip$
+    {url empty$
+      'skip$
+      { "\urlprefix\url{" url * "}" * output }
+    if$}
     { "\href{https://dx.doi.org/" doi * "}{\doiprefix \detokenize{" * doi * "}}" * output }
   if$
  note empty$
