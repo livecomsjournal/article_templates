@@ -21,9 +21,10 @@ A sample bibliography file is provided in the LiveCoMS Article Template reposito
   * DOI
   * Publisher URL
   * some other ID
-- Entries in the BibTeX file are formatted as follows:
+- The vancouver-livecoms.bst style will prefer to include the DOI, and suppress a separate URL, if the DOI is supplied, so that only one electronic link is included in the citation.
+- Electronic links in the BibTeX file are formatted as follows:
   * DOI: doi = {10.1093/nar/gkr1030}
-  * Publisher URL: URL = {http://nar.oxfordjournals.org/content/40/D1/D706.abstract}
+  * Publisher URL: url = {http://nar.oxfordjournals.org/content/40/D1/D706.abstract}
   * An alternate ID can be provided via the "note" tag, such as: note = {PubMed: https://www.ncbi.nlm.nih.gov/pubmed/20454547}
 - Do not include the "http://" or "https://" prefix in DOI tags
 
