@@ -247,6 +247,9 @@
 \newcommand{\pubvolume}[1]{%
   \appto{\@publishedvolume}{#1}{}{}
 }
+\newcommand{\pubissue}[1]{%
+  \appto{\@publishedissue}{#1}{}{}
+}
 \newcommand{\pubyear}[1]{%
   \appto{\@publishedyear}{#1}{}{}
 }
@@ -270,7 +273,7 @@
 %  Accepted: \@publisheddateaccepted}%
 \cfoot{\small\color{white} \vspace{\baselineskip} \small\color{LiveCoMSMediumGrey} \thepage\space of\space\pageref{LastPage}}%
 \rfoot{\small\color{LiveCoMSMediumGrey}\href{https://doi.org/\@publishedDOI}{https://doi.org/\@publishedDOI}\\
-  {\it Living J. Comp. Mol. Sci.} \@publishedyear, \@publishedvolume, \@publishedarticlenum }%
+  {\it Living J. Comp. Mol. Sci.} \@publishedyear, \@publishedvolume\nobreak\hspace{.05em}(\@publishedissue), \@publishedarticlenum }%
 \else
 \cfoot{\small\color{white} \vspace{\baselineskip} \small\color{LiveCoMSMediumGrey} \thepage\space of\space\pageref{LastPage}}%
 %\rfoot{\small\color{LiveCoMSMediumGrey}Page \thepage\space of\space\pageref{LastPage}}%
