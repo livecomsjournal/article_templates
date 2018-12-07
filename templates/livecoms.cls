@@ -322,6 +322,7 @@
 \def\@deceased{}
 % Added blurb for LiveComs
 \def\@blurb{}
+\def\@orcidblock{}
 
 
 \newcommand{\corr}[2]{%
@@ -351,6 +352,16 @@
 
 % Added for LiveComs
 \newcommand{\blurb}[1]{\def\@blurb{#1}}
+
+\newcommand{\orcid}[2]{%
+  \ifx\empty\@orcidblock\else\appto{\@orcidblock}{\\}{}{}\fi
+  \appto{\@orcidblock}{%
+    #1:\space%
+    \ifx\empty#2\else\href{https://orcid.org/#2}{#2} \fi
+  }{}{}%
+}
+
+
 
 \reversemarginpar
 
@@ -423,6 +434,12 @@
   \vskip16pt
   {\@author\par}
   \vskip8pt
+}
+
+\newcommand{\makeorcid}{%
+  % \textbf{*For correspondence:\\}  \@correspondence\par
+  % \textbf{ORCID:\\}  \@correspondence\par
+  \textbf{ORCID:\\}  \@orcidblock\par
 }
 
 %% Insert a grey line to separate floats from main text
