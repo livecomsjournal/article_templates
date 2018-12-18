@@ -78,23 +78,27 @@ If you head this route, be sure you have read the [LiveCoMS authors guide](https
 
 - Author Identifiers
 
-```\orcid{Author 1 name}{AAAA-BBBB-CCCC-DDDD}
+```
+\orcid{Author 1 name}{AAAA-BBBB-CCCC-DDDD}
 \orcid{Author 2 name}{EEEE-FFFF-GGGG-HHHH}
 ...
-\orcid{Author N name}{IIII-JJJJ-KKKK-LLLL}```
+\orcid{Author N name}{IIII-JJJJ-KKKK-LLLL}
+```
 
 
 "Author 1 name" should match the full name of the first author as given in the `\author[1]{Author 1 name}` command
 
 - Publication / Citation Information
 
-`\pubDOI{10.XXXX/YYYYYYY}
+```
+\pubDOI{10.XXXX/YYYYYYY}
 \pubvolume{<volume>}
 \pubissue{<issue>}
 \pubyear{<year>}
 \articlenum{<number>}
 \datereceived{Day Month Year}
-\dateaccepted{Day Month Year}`
+\dateaccepted{Day Month Year}
+```
 
 Include "ASAPversion" in the class options
 
