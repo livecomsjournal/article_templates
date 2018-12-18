@@ -73,7 +73,7 @@ If you head this route, be sure you have read the [LiveCoMS authors guide](https
 - Keep your paper in one sentence per line.  This makes it easy to see which sentences have changed when you look at the diff between one version and the next.  The GitHub diff tools operate on a per-line basis. If there are no line breaks between sentences, then other authors will see only that something somewhere in the paragraph has changed.
 
 
-### Class Options for livecoms.cls
+## Class Options for livecoms.cls
 
 
 - Author Identifiers
@@ -100,6 +100,6 @@ If you head this route, be sure you have read the [LiveCoMS authors guide](https
 \dateaccepted{Day Month Year}
 ```
 
-Include "ASAPversion" in the class options
+Include `ASAPversion` in the class options
 
-Include "pubversion" (but not "ASAPversion") in the class options when the article is in final form for the release of a LiveCoMS issue (i.e., all of the volume/issue/page information is known and has been entered in the manuscript source file.
+Include `pubversion` (but not `ASAPversion`) in the class options when the article is in final form for the release of a LiveCoMS issue (i.e., all of the volume/issue/page information is known and has been entered in the manuscript source file.
