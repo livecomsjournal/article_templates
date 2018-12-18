@@ -73,10 +73,10 @@ If you head this route, be sure you have read the [LiveCoMS authors guide](https
 - Keep your paper in one sentence per line.  This makes it easy to see which sentences have changed when you look at the diff between one version and the next.  The GitHub diff tools operate on a per-line basis. If there are no line breaks between sentences, then other authors will see only that something somewhere in the paragraph has changed.
 
 
-## Class Options for livecoms.cls
+## Class Options for the LiveCOMS LaTeX Class (livecoms.cls)
 
-
-- Author Identifiers
+#### Author Identifiers
+LiveCoMS requires that all authors include their ORCID author identifier (see https://www.orcid.org for more details and to obtain an ORCID) in published manuscripts. Similar to the LaTeX instructions that specify author affiliations, the authors' ORCID identifiers should be defined in the document preamble via the `\orcid` command:
 
 ```
 \orcid{Author 1 name}{AAAA-BBBB-CCCC-DDDD}
@@ -85,10 +85,16 @@ If you head this route, be sure you have read the [LiveCoMS authors guide](https
 \orcid{Author N name}{IIII-JJJJ-KKKK-LLLL}
 ```
 
+"Author 1 name" should match the full name of the first author as given in the `\author[...]{Author 1 name}` command, and similarly for the other authors.
 
-"Author 1 name" should match the full name of the first author as given in the `\author[1]{Author 1 name}` command
+The "Author Identification" section should be placed immediately prior to the bibliography by including the following in the LaTeX source prior to the `\bibliography` command:
 
-- Publication / Citation Information
+```
+\section*{Author Information}
+\makeorcid
+```
+
+#### Publication / Citation Information
 
 ```
 \pubDOI{10.XXXX/YYYYYYY}
