@@ -78,10 +78,10 @@ If you head this route, be sure you have read the [LiveCoMS authors guide](https
 
 - Author Identifiers
 
-`\orcid{Author 1 name}{AAAA-BBBB-CCCC-DDDD}  
-\orcid{Author 2 name}{EEEE-FFFF-GGGG-HHHH}  
-...  
-\orcid{Author N name}{IIII-JJJJ-KKKK-LLLL}`
+```\orcid{Author 1 name}{AAAA-BBBB-CCCC-DDDD}
+\orcid{Author 2 name}{EEEE-FFFF-GGGG-HHHH}
+...
+\orcid{Author N name}{IIII-JJJJ-KKKK-LLLL}```
 
 
 "Author 1 name" should match the full name of the first author as given in the `\author[1]{Author 1 name}` command
