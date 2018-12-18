@@ -394,7 +394,7 @@
 
 %% Abstract outside frontmatter will throw an error!
 \RenewEnviron{abstract}{%
-  \ClassError{livecome}
+  \ClassError{livecoms}
   {Nope nope nope, please put the abstract inside the frontmatter environment.}
   {Please put the abstract inside the frontmatter environment.}
 }
