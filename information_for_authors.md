@@ -78,9 +78,9 @@ If you head this route, be sure you have read the [LiveCoMS authors guide](https
 
 - Author Identifiers
 
-`\orcid{Author 1 name}{AAAA-BBBB-CCCC-DDDD}
-\orcid{Author 2 name}{EEEE-FFFF-GGGG-HHHH}
-...
+`\orcid{Author 1 name}{AAAA-BBBB-CCCC-DDDD}<br>
+\orcid{Author 2 name}{EEEE-FFFF-GGGG-HHHH}<br>
+...<br>
 \orcid{Author N name}{IIII-JJJJ-KKKK-LLLL}`
 
 
