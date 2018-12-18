@@ -71,3 +71,31 @@ If you head this route, be sure you have read the [LiveCoMS authors guide](https
 ### Some LaTeX formatting tips
 
 - Keep your paper in one sentence per line.  This makes it easy to see which sentences have changed when you look at the diff between one version and the next.  The GitHub diff tools operate on a per-line basis. If there are no line breaks between sentences, then other authors will see only that something somewhere in the paragraph has changed.
+
+
+### Class Options for livecoms.cls
+
+
+- Author Identifiers
+
+`\orcid{Author 1 name}{AAAA-BBBB-CCCC-DDDD}
+\orcid{Author 2 name}{EEEE-FFFF-GGGG-HHHH}
+...
+\orcid{Author N name}{IIII-JJJJ-KKKK-LLLL}`
+
+
+"Author 1 name" should match the full name of the first author as given in the `\author[1]{Author 1 name}` command
+
+- Publication / Citation Information
+
+`\pubDOI{10.XXXX/YYYYYYY}
+\pubvolume{<volume>}
+\pubissue{<issue>}
+\pubyear{<year>}
+\articlenum{<number>}
+\datereceived{Day Month Year}
+\dateaccepted{Day Month Year}`
+
+Include "ASAPversion" in the class options
+
+Include "pubversion" (but not "ASAPversion") in the class options when the article is in final form for the release of a LiveCoMS issue (i.e., all of the volume/issue/page information is known and has been entered in the manuscript source file.
