@@ -49,11 +49,11 @@ v0.5: Revision following peer-review
 v1.0: Accepted form of paper, following all editor- and publisher-requested revisions  
 v1.1: One section of v1.0 text is revised for clarity or textual accuracy  
 v1.14: Fourteenth non-trivial revision to v1.0 text  
-... continued ...  
+...  
 v2.0 : Second Accepted form of paper, following all editor- and publisher-requested revisions  
 etc.
 
-Authors may consider adding a descriptive tag to pre-submission draft versions (e.g., v0.1-draft5) or drafts of the manuscript as it transition from one major version to another (e.g., v2.0-alpha5 to indicate a pre-review draft of v2.0). The format of these tags is not specified by the LiveCoMS guidelines.
+Authors may add a descriptive tag to pre-submission versions (e.g., v0.1-draft5) or drafts of the manuscript as it transitions from one major version to another (e.g., v2.0-alpha3 to indicate a pre-review draft of v2.0). Authors are free to use these tags as they see fit, but tags must not be used in official releases of the manuscript.
 
 #### Change logs
 
@@ -116,6 +116,8 @@ The "Author Identification" section should be placed immediately prior to the bi
 
 #### Publication / Citation Information
 
+When a LiveCoMS manuscript is accepted for publication, the editors will request final edits and formatting changes. At that time, the authors should fill in the fields in the LaTeX preamble that specify that publication information:
+
 ```
 \pubDOI{10.XXXX/YYYYYYY}
 \pubvolume{<volume>}
@@ -126,6 +128,8 @@ The "Author Identification" section should be placed immediately prior to the bi
 \dateaccepted{Day Month Year}
 ```
 
-Include `ASAPversion` in the class options
+These fields should be filled out as completely as possible. Also at this time, include `ASAPversion` in the class options. The `ASAPversion` option will create a document footer that lists the received and accepted dates, and an indicator that the article is in "ASAP" form.
 
-Include `pubversion` (but not `ASAPversion`) in the class options when the article is in final form for the release of a LiveCoMS issue (i.e., all of the volume/issue/page information is known and has been entered in the manuscript source file.
+When an issue of LiveCoMS is finalized, the editors will request one set of final changes. First, the authors should finish filling out the publication information shown above. Lastly, the `ASAPversion` class option should be replaced by `pubversion`. 
+
+Include `pubversion` (but not `ASAPversion`) in the class options when the article is in final form for the release of a LiveCoMS issue (i.e., all of the volume/issue/page information is known and has been entered in the manuscript source file. The footer will change to include the full article citation.
