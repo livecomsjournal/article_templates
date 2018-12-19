@@ -38,6 +38,7 @@ The **Major Version** number must follow a strict sequence:
 1 indicates the first version reviewed and accepted (in final form) for publication in LiveCoMS
 2 indicates the second version reviewed and accepted (in final form) for publication in LiveCoMS
 3 ...
+
 An increment in the version number indicates that the manuscript has been peer reviewed.
 
 The **Minor Version** number should increment with each non-trivial revision (e.g., more than a spelling, grammar, or formatting correction) to the manuscript.
