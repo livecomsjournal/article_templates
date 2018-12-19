@@ -53,7 +53,7 @@ v1.14: Fourteenth non-trivial revision to v1.0 text
 v2.0 : Second Accepted form of paper, following all editor- and publisher-requested revisions  
 etc.
 
-Authors may add a descriptive tag to pre-submission versions (e.g., v0.1-draft5) or drafts of the manuscript as it transitions from one major version to another (e.g., v2.0-alpha3 to indicate a pre-review draft of v2.0). Authors are free to use these tags as they see fit, but tags must not be used in official releases of the manuscript.
+Authors may add a descriptive tag to pre-submission versions (e.g., v0.1-draft5) or drafts of the manuscript as it transitions from one major version to another (e.g., v2.0-alpha3 to indicate a pre-review draft of v2.0). Authors are free to use these tags as they see fit while drafting a manuscript, but tags must not be used in official releases of the manuscript.
 
 #### Change logs
 
