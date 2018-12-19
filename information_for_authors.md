@@ -31,7 +31,7 @@ It is also possible to easily set up tools like Zenodo to automatically generate
 
 #### Article Versioning and LiveCoMS
 
-LiveCoMS requires a version identification scheme for manuscripts according the general "vY.X" format, where Y is the major version and X is the minor version. The version number should be included in the article title, e.g. "This is the title [Article v1.5]".
+LiveCoMS requires a version identification scheme for manuscripts according the general **vY.X** format, where Y is the major version and X is the minor version. The version number should be included in the article title, e.g. "This is the title [Article v1.5]".
 
 The **Major Version** number must follow a strict sequence:
 0 indicates a version of the manuscript prior to acceptance in LiveCoMS.
@@ -42,15 +42,15 @@ An increment in the version number indicates that the manuscript has been peer r
 
 The **Minor Version** number should increment with each non-trivial revision (e.g., more than a spelling, grammar, or formatting correction) to the manuscript.
 
-For example, the version sequence for an article in LiveCoMS could proceed as:
-v0.1: Some pre-submission version of the manuscript
-v0.3: First version submitted to LiveCoMS
-v0.5: Revision following peer-review
-v1.0: Accepted form of paper, following all editor- and publisher-requested revisions
-v1.1: One section of v1.0 text is revised for clarity or textual accuracy
-v1.14: Fourteenth non-trivial revision to v1.0 text
-... continued ...
-v2.0 : Second Accepted form of paper, following all editor- and publisher-requested revisions
+For example, the version sequence for an article in LiveCoMS could proceed as:  
+v0.1: Some pre-submission version of the manuscript  
+v0.3: First version submitted to LiveCoMS  
+v0.5: Revision following peer-review  
+v1.0: Accepted form of paper, following all editor- and publisher-requested revisions  
+v1.1: One section of v1.0 text is revised for clarity or textual accuracy  
+v1.14: Fourteenth non-trivial revision to v1.0 text  
+... continued ...  
+v2.0 : Second Accepted form of paper, following all editor- and publisher-requested revisions  
 etc.
 
 Authors may consider adding a descriptive tag to pre-submission draft versions (e.g., v0.1-draft5) or drafts of the manuscript as it transition from one major version to another (e.g., v2.0-alpha5 to indicate a pre-review draft of v2.0). The format of these tags is not specified by the LiveCoMS guidelines.
