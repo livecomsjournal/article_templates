@@ -130,6 +130,4 @@ When a LiveCoMS manuscript is accepted for publication, the editors will request
 
 These fields should be filled out as completely as possible. Also at this time, include `ASAPversion` in the class options. The `ASAPversion` option will create a document footer that lists the received and accepted dates, and an indicator that the article is in "ASAP" form.
 
-When an issue of LiveCoMS is finalized, the editors will request one set of final changes. First, the authors should finish filling out the publication information shown above. Lastly, the `ASAPversion` class option should be replaced by `pubversion`. 
-
-Include `pubversion` (but not `ASAPversion`) in the class options when the article is in final form for the release of a LiveCoMS issue (i.e., all of the volume/issue/page information is known and has been entered in the manuscript source file. The footer will change to include the full article citation.
+When an issue of LiveCoMS is finalized, the editors will request one set of final changes. First, the authors should finish filling out the publication information shown above. Lastly, the `ASAPversion` class option should be replaced by `pubversion`. The footer will change to include the full article citation. The `ASAPversion` and `pubversion` options cannot be specified simultaneously; the LaTeX compiler will report an error.
