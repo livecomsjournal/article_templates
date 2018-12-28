@@ -24,16 +24,37 @@ Some particular recommendations we have when you set up your GitHub repository.
 All versions of your article should be dated; our templates automatically add a date to each compilation of the PDF, and when you make changes to your content, you should include an updated version of the PDF in your repository.
 
 **Versioning of articles occurs via two mechanisms which should work together**:
-- LiveCoMS templates use titles which have a version number explicitly stated in the title. Change this version whenever you make a significant change, using a numbering scheme you agree on with your co-authors and, ideally, document here.
+- LiveCoMS templates use titles which have a version number explicitly stated in the title. Change this version whenever you make a significant change, using a numbering scheme that conforms to the guidelines given below.
 - GitHub has a mechanism to archive specific versions of code (in this case, your paper!) as specific "releases". Whenever you increment the version number in your title, you should also [create a new release on GitHub](https://help.github.com/articles/creating-releases/) to archive it and concisely describe any associated changes.
 
 It is also possible to easily set up tools like Zenodo to automatically generate a new DOI for each release of a project, if you so desire.
 
-#### Versioning and LiveCoMS
+#### Article Versioning and LiveCoMS
 
-Please note that versioning on GitHub is your choice and is separate from the process of publishing new peer-reviewed versions in LiveCoMS.
-Each version you publish in LiveCoMS must have a unique version number, but these version numbers are up to you, and can track with what is used on your GitHub repository.
-For example, you might choose to give your first published version on LiveCoMS the version number 1.0, but if in two years it makes sense to do a new peer-reviewed version, this could hypothetically be version 2.4, if that's what your GitHub repository is at.
+LiveCoMS requires a version identification scheme for manuscripts according the general **vY.X** format, where Y is the major version and X is the minor version. The version number should be included in the article title, e.g. "This is the title [Article v1.5]".
+
+The **Major Version** number must follow a strict sequence:
+0 indicates a version of the manuscript prior to acceptance in LiveCoMS.
+1 indicates the first version reviewed and accepted (in final form) for publication in LiveCoMS
+2 indicates the second version reviewed and accepted (in final form) for publication in LiveCoMS
+3 ...
+
+An increment in the version number indicates that the manuscript has been peer reviewed.
+
+The **Minor Version** number should increment with each non-trivial revision (e.g., more than a spelling, grammar, or formatting correction) to the manuscript.
+
+For example, the version sequence for an article in LiveCoMS could proceed as:  
+v0.1: Some pre-submission version of the manuscript  
+v0.3: First version submitted to LiveCoMS  
+v0.5: Revision following peer-review  
+v1.0: Accepted form of paper, following all editor- and publisher-requested revisions  
+v1.1: One section of v1.0 text is revised for clarity or textual accuracy  
+v1.14: Fourteenth non-trivial revision to v1.0 text  
+...  
+v2.0 : Second Accepted form of paper, following all editor- and publisher-requested revisions  
+etc.
+
+Authors may add a descriptive tag to pre-submission versions (e.g., v0.1-draft5) or drafts of the manuscript as it transitions from one major version to another (e.g., v2.0-alpha3 to indicate a pre-review draft of v2.0). Authors are free to use these tags as they see fit while drafting a manuscript, but tags must not be used in official releases of the manuscript.
 
 #### Change logs
 
@@ -71,3 +92,43 @@ If you head this route, be sure you have read the [LiveCoMS authors guide](https
 ### Some LaTeX formatting tips
 
 - Keep your paper in one sentence per line.  This makes it easy to see which sentences have changed when you look at the diff between one version and the next.  The GitHub diff tools operate on a per-line basis. If there are no line breaks between sentences, then other authors will see only that something somewhere in the paragraph has changed.
+
+
+## Important Class Options for the LiveCOMS LaTeX Class (livecoms.cls)
+
+#### Author Identifiers
+LiveCoMS requires that all authors include their ORCID author identifier (see https://www.orcid.org for more details and to obtain an ORCID) in published manuscripts. Similar to the LaTeX instructions that specify author affiliations, the authors' ORCID identifiers should be defined in the document preamble via the `\orcid` command:
+
+```
+\orcid{Author 1 name}{AAAA-BBBB-CCCC-DDDD}
+\orcid{Author 2 name}{EEEE-FFFF-GGGG-HHHH}
+...
+\orcid{Author N name}{IIII-JJJJ-KKKK-LLLL}
+```
+
+"Author 1 name" should match the full name of the first author as given in the `\author[...]{Author 1 name}` command, and similarly for the other authors.
+
+The "Author Identification" section should be placed immediately prior to the bibliography by including the following in the LaTeX source prior to the `\bibliography` command:
+
+```
+\section*{Author Information}
+\makeorcid
+```
+
+#### Publication / Citation Information
+
+When a LiveCoMS manuscript is accepted for publication, the editors will request final edits and formatting changes. At that time, the authors should fill in the fields in the LaTeX preamble that specify that publication information:
+
+```
+\pubDOI{10.XXXX/YYYYYYY}
+\pubvolume{<volume>}
+\pubissue{<issue>}
+\pubyear{<year>}
+\articlenum{<number>}
+\datereceived{Day Month Year}
+\dateaccepted{Day Month Year}
+```
+
+These fields should be filled out as completely as possible. Also at this time, include `ASAPversion` in the class options. The `ASAPversion` option will create a document footer that lists the received and accepted dates, and an indicator that the article is in "ASAP" form.
+
+When an issue of LiveCoMS is finalized, the editors will request one set of final changes. First, the authors should finish filling out the publication information shown above. Second, the `ASAPversion` class option should be replaced by `pubversion`. The footer will then replace the "ASAP" indicator with the full article citation. The `ASAPversion` and `pubversion` options cannot be specified simultaneously; the LaTeX compiler will report an error.
