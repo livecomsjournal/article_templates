@@ -215,7 +215,7 @@
 
 \if@software
 \documenttypetrue
-\newcommand{\documenttype}{Software Analyses}
+\newcommand{\documenttype}{Software Analyses Paper}
 \else
 % nothing
 \fi
