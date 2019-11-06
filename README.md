@@ -44,5 +44,11 @@ Our templates require a relatively recent LaTeX installation and have been teste
 
 There are known compatibility issues with TeXLive 2015.
 
+## Recommendations/technical notes
+
+For well-formatted manuscripts, we recommend that you let LaTeX handle figure/table placement for you as much as possible, so please avoid specifying strenuous float instructions like `[h!]` and `[H]` as much as possible.
+
+Also, remember to plan for a [representative image](https://livecomsjournal.github.io/authors/policies/index.html#article-submission) which will be used to highlight your article on the journal website and publications. We give specific guidelines for this image on the journal website in the section on [article submission](https://livecomsjournal.github.io/authors/policies/index.html#article-submission).
+
 ## Acknowledgments
 We are particularly grateful to eLife for providing the excellent LaTeX template (under the CC-BY license) which provided the starting point for LiveCoMS' templates, and to [LianTze Lim](https://github.com/liantze) ([http://liantze.penguinattack.org](http://liantze.penguinattack.org)) who provided support in adapting the class file and template from eLife v 1.4.
