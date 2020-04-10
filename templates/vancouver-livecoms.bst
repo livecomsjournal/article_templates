@@ -804,6 +804,7 @@ FUNCTION {format.names.ed}
 {
   format.names
 }
+
 FUNCTION {format.key}
 { empty$
     { key field.or.null }
@@ -834,7 +835,7 @@ FUNCTION {get.bbl.assignee}
 { assignee num.names$ #1 > 'bbl.assignees 'bbl.assignee if$ }
 
 FUNCTION {format.editors}
-{ editor "editor" format.names duplicate$ empty$ 'skip$
+{ editor "editor" format.names.auth duplicate$ empty$ 'skip$
     {
       "," *
       " " *
