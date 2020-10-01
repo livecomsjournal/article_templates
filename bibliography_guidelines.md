@@ -7,6 +7,7 @@
 - Authors are responsible for:
   * correctly formatting the bibliography file
   * correctly compiling their manuscript against the bibliography file; see http://www.bibtex.org/Using
+  * ensuring the bibliography is correct; authors may benefit from automated tools to curate/check BibTeX files against automatic online sources, such as [betterbib](https://github.com/nschloe/betterbib). The output of such tools typically still requires manual curation, but can be very helpful in identifying potential errors or mistakes.
 - BibTeX is invoked in the main TeX document via: \bibliography{livecoms-sample}
 - LiveCoMS uses a bibliography style derived from the "Vancouver" style that is distributed by eLife. The "vancouver-livecoms.bst" file must be included in the same directory as the LiveCoMS TeX file to successfully compile the bibliography.  
 
