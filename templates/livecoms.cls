@@ -26,7 +26,7 @@
 \DeclareOption{lineno}{\@reqslinenotrue}
 
 %% the type of document this is.  The current types:
-% bestpractices, editorial, tutorial, review, software, lessons
+% bestpractices, editorial, tutorial, training, review, software, lessons
 \newif\if@bestpractices
 \DeclareOption{bestpractices}{\@bestpracticestrue}
 
@@ -35,6 +35,9 @@
 
 \newif\if@tutorial
 \DeclareOption{tutorial}{\@tutorialtrue}
+
+\newif\if@training
+\DeclareOption{training}{\@trainingtrue}
 
 \newif\if@review
 \DeclareOption{review}{\@reviewtrue}
@@ -202,6 +205,13 @@
 \if@tutorial
 \documenttypetrue
 \newcommand{\documenttype}{Tutorial}
+\else
+% nothing
+\fi
+
+\if@training
+\documenttypetrue
+\newcommand{\documenttype}{Training Article}
 \else
 % nothing
 \fi
