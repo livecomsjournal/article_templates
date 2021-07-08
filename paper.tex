@@ -154,16 +154,42 @@ For this reason, asking the developers for help shouldn't be the \emph{first}
 thing you do. Especially for software with a large community, chances are
 someone else has run into similar difficulties, and you can probably save
 yourself and the developers a lot of time if you look for solutions on your own
-first. Indeed, quickly debugging your use of others' software is one of the
-major skills one develops when learning to do computational research.
+first. Indeed, quickly debugging your use of other people's software is one of
+the major skills one develops when learning to do computational research.
 
-The first step is to check the manual. This might seem trivially obvious, but you'd be astonished how many emails developers get that are directly answered in the manual.
+The first step is to read the error message carefully, if there is one; this
+obviously doesn't apply in all cases, but it's often applicable and far too
+often skipped. It's true that many software packages have cryptic unhelpful
+error messages, but far too often people write for help when the solution is
+right in front of them. If the error message says ``Could not open file
+foo.dat'', it's worth checking whether there is a file called ``foo.dat'' and if
+not figuring out what was supposed to create it.
 
-This might be an actual standalone
-manual, or part of the web page for the software package, but if it exists it
-should be your first stop. Look for a frequently asked questions list on the web site,
+The second step is to check the manual. This might seem trivially obvious, but
+you'd be astonished how many emails developers get that are directly answered in
+the manual. If the manual is short, you can read the whole thing. If it's
+longer, search for relevant-seeming keywords, scan the sections that seem to
+pertain to your error message. If there's an FAQ (frequently asked questions)
+list, check that first.
 
-Search the internet for the error message (this works very well for software with thousands of users, less well with smaller packages)
+Next, search the internet for the error message; this works very well for
+software with thousands of users, where it might very well deserve to be the
+first option. It is less effective with less common packages, but it's an easy
+thing to check, so you'd be foolish to skip it.
+
+Finally, you can consider diving into the code. This decision depends very much
+on the complexity of the package, your skill level, and how urgently you need
+the solution. More often than not, comprehending the whole software package will
+be too time consuming, but there are tricks and shortcuts one can use to at
+least figure out where things might be going wrong. Figuring out where the error
+is occurring can sometimes help you figure out why it happened, so examine the
+stack trace if there is one. Alternatively, you can search the code base for the
+error message, to see what drove the error; it's not uncommon for the comments
+in the code to be clearer and more indicative of what could go wrong than the
+error message itself. To be clear: as an end user, \emph{you are not obligated
+to check the code}, but it can sometimes be a good shortcut to help you either
+solve your problem on your own or give the developers what they need to solve
+it.
 
 \section{Obligations of software developers}
 
