@@ -107,7 +107,7 @@ are bugs.
 
 In all of these cases, it is necessary to interact with the people who develop
 and support the code. How you go about it has an enormous impact on your
-likelihood of success and how you are viewed, and asking complete strangers for
+likelihood of success and how you are viewed. Asking complete strangers for
 help is often intimidating, especially the first time you do it. However, the
 best way to do so is rarely taught explicitly --- at best, it's something one
 picks up by example, from fellow lab members or the PI.  {\emph The goal of this
@@ -115,8 +115,18 @@ paper is to reveal the hidden curriculum -- what's expected of a software
 consumer, how to ask for help, how to contribute productively to a software
 community (regardless of whether you can write code).}
 
-This article is written from a perspective of academic open-source scientific
-software. Much of what we suggest is universal, but some points --- like the
+This article is written from a the perspective of a developer of academic
+open-source scientific software, based on my personal experience as a developer
+and user. I released my first piece of open source code, wham \cite{WHAM}, a
+tool for analyzing umbrella sampling simulation,  during the summer of 2000.  My
+group released LOOS\cite{Grossfield-2009, LOOS-JCC}, a suite of tools for
+developing new tools to analyze molecular dynamics simulations, in 2008. Over
+the years, I've interacted with hundreds of people who've tried to use one
+package or the other. Most of these interactions have been positive, some
+overwhelmingly so. Others were not. This article is an attempt to distill my
+experiences into a concise set of recommendations.
+
+Much of what I suggest is universal, but some points --- like the
 reminder that the people providing the support are likely volunteers --- are
 not.  Regardless, we view the interaction between developers and users as an
 informal social contract, where each has obligations and expectations for the
@@ -125,10 +135,6 @@ conventions for interaction, but we hope that the recommendations we make are at
 the very least a good starting point for new users of scientific software.
 
 
-
-connect to open science: FAIR principles say developers should want code to be
-reusable. Publishing the code isn't enough, you need to make it usable as well.
-That means support.
 
 \section{Target Audience}
 
@@ -189,7 +195,33 @@ in the code to be clearer and more indicative of what could go wrong than the
 error message itself. To be clear: as an end user, \emph{you are not obligated
 to check the code}, but it can sometimes be a good shortcut to help you either
 solve your problem on your own or give the developers what they need to solve
-it.
+it. Moreover, if you do solve the problem, it's a good idea to share your
+solution with the developers; most will be grateful to you for your help.
+
+\subsection{Ask for help in the right place}
+
+\subsection{Write a good bug report}
+
+\subsection{Contribute to the community}
+
+\subsection{Treat people with respect}
+
+This should go without saying, but if you're asking for help it behooves you to
+do so respectfully. We're not saying that you need to be obsequious. Rather,
+approach every interaction with respect: respect for people's time, respect for
+their ideas, respect for their identity. If you're asking for help, do so with
+the perspective that the developer is volunteering their time to help you, with
+minimal payoff to them.  If you're reporting a bug, you're almost certainly
+frustrated; try not to take that frustration out on the developers. If you're
+offering a new feature, keep in mind that it may not align with the developers'
+vision for where the software is going.
+
+If you're interacting with fellow users in a support forum, don't mock
+questioners who are less experienced than you --- a question may seem foolish to
+you, but even an uninformed or ill-directed question is an opportunity for
+teaching; one of our goals for this document is that it become a resource to
+educate new users of expected norms without consuming developers' time and
+mental bandwidth.
 
 \section{Obligations of software developers}
 
@@ -198,6 +230,24 @@ help.  However, this does not mean that the developers of scientific software
 are without responsibilities. If we want users to behave in a certain way, it
 behooves us to tell them that. Users approaching us in good faith deserve to be
 treated fairly and courteously.
+
+connect to open science: FAIR principles say developers should want code to be
+reusable. Publishing the code isn't enough, you need to make it usable as well.
+That means support.
+
+Treating everyone with courtesy and respect, regardless of their identity, is
+essential if you want the software tool to have a vibrant community surrounding
+it. Ensuring people aren't excluded is the fair and just way to proceed ---
+making sure that racist, sexist, anti-LGBTQ, etc language and behavior is
+unwelcome and unacceptable is simply the moral thing to do (it's also pragmatic
+--- can you really afford to lose talented developers and users because they
+don't feel welcome?) This doesn't just mean use of epithets in messages (though
+that's clearly unacceptable). Keep an eye on how things are named, on jokes
+present in the code or messages, on whose opinions are listened to and who is
+ignored.  Above all, if someone tells you a particular behavior or situation is
+harmful, \emph{believe them}. Something that feels minor (or is just  a joke) to
+you may hit others very differently, and part of respect is understanding and
+accounting for that.
 
 \section{Checklists}
 % Here is a single-column checklist that consists of multiple sub-checklists
@@ -209,8 +259,8 @@ treated fairly and courteously.
 \item Asks for help in the right place
 \item Writes informative bug reports
 \item Cites and acknowledges software appropriately
-\item Treats fellow members and developers with courtesy and respect
 \item Contributes to the community
+\item Treats fellow members and developers with courtesy and respect
 \end{itemize}
 \end{checklist}
 
