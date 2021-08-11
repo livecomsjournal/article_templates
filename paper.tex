@@ -146,6 +146,7 @@ for help.
 \section{Good practices in asking for help}
 
 \subsection{Try to solve your own problem}
+\label{ss:yourself}
 
 There's absolutely nothing wrong with needing help to figure out how to do
 something with a new piece of software. Perhaps your use case wasn't considered
@@ -227,13 +228,41 @@ requires striving for two somewhat contradictory goals: you must give the
 developer all of the relevant information about the problem, as concisely as
 possible.
 
-The reason these two tasks are complicated is that, as a user, you often don't know what information is relevant. 
+Taking the first part first: this is hard, because as a user you're usually not
+an expert, \emph{so you don't know what's relevant}. The only way to know for
+sure what is and isn't relevant is to develop a mental model for the problem,
+which requires effort. Still, as pointed out above, your prior efforts to solve
+the problem yourself (see \ref{ss:yourself}) will help you here.  Moreover, you
+may find that the act of writing the note asking for help may in itself let you
+solve your problem. The process is analogous to rubber duck debugging
+\cite{Thomas-1999}, in that the act of figuring out how to describe a problem
+clearly can lead you to a solution.
 
-rubber duck debugging \cite{Thomas-1999}-- the process of writing a good bug
-report is analogous to solving the problem. Often, you can't really do it,
-because if you knew what was necessary, you'd be able to solve your problem.
+Moreover, many developers will help you with the process. For example,
+GitHub-based projects have the option to set up issue templates
+\cite{github-templates}; as the name implies, these templates contain a series
+of questions one should answer when submitting a new issue. Although they are
+generally customized for each project, these questions are also a good baseline
+for the kinds of information one should supply when asking for support
+elsewhere. For example, for a bug report one should
 
-GitHub issue templates \cite{github-templates}
+\begin{itemize}
+
+    \item Describe the bug, including the expected behavior and how the current
+    behavior differs.
+
+    \item Give steps necessary to reproduce the bug.
+
+    \item Describe the platform you're running on (e.g. the operating system for
+    a conventional computer, hardware if it's a tablet, etc.). If the problem is
+    related to building or installing the software, describe the build system
+    (e.g. compiler version) or package manager (e.g. Conda\cite{ANACONDA}).
+
+\end{itemize}
+
+For a feature request, you would also describe what you hope to accomplish and
+how you'd like to see it work, as well as any current workaround you've
+developed.
 
 \subsection{Contribute to the community}
 
@@ -366,7 +395,7 @@ For a more detailed description of contributions from the community and others, 
 %Declare any potentially competing interests, financial or otherwise
 %%%%%%%
 
-Alan Grossfield serves as a consultant to two companies, Moderna Therapeutics
+Alan Grossfield serves as a consultant to two companies, Moderna, Inc.
 and Atelerix Life Sciences.
 
 \section{Funding Information}
