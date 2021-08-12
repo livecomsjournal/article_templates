@@ -134,42 +134,77 @@
 
 % \captionsetup*[table]{skip=\medskipamount}
 
+%
+% Bibliography
+%
 
-\RequirePackage[square,numbers,sort&compress]{natbib}
-\RequirePackage{natmove}
+%\RequirePackage[square,numbers,sort&compress]{natbib}
+\RequirePackage[
+backend=biber,
+%bibstyle=chem-angew,
+%bibstyle=oscola,
+%bibstyle=nejm,
+%bibstyle=nature,
+bibstyle=numeric-comp,
+giveninits=true, % use initials for given names
+sorting=none,    % print in order of citation
+url=false,
+doi=true,
+eprint=false,
+issn=false,
+isbn=false,
+]{biblatex}
+
 \renewcommand{\bibfont}{\small}
+
+\DeclareFieldFormat
+  [article,inbook,incollection,inproceedings,patent,thesis,unpublished]
+  {doi}{
+\small\url{https://doi.org/#1}}
+
+%\DeclareNameFormat{author}{%
+%  \ifthenelse{\value{listcount}=1}
+%    {\textbf{\color{LiveCoMSMediumGrey}\namepartfamily%
+%      \ifdefvoid{\namepartgiven}{}{\addcomma\space\namepartgiveni}}}
+%    {\ifdefvoid{\namepartgiven}{}{\namepartgiveni\space}%
+%    \namepartfamily}%
+%  \ifthenelse{\value{listcount}<\value{liststop}}
+%  {\addcomma\space}
+%  {}}
+
+%\RequirePackage{natmove}
 % modifed from https://github.com/gbhutani/vancouver_authoryear_bibstyle/
-\IfFileExists{vancouver-livecoms.bst}
-  {\bibliographystyle{vancouver-livecoms}}
-  {\PackageWarning{elife}{vancouver-livecoms.bst not found; falling back to apalike bibliography style.}\bibliographystyle{apalike}}
-% Make author in citation italic
-\renewcommand{\NAT@nmfmt}[1]{{\bfseries\itshape\color{LiveCoMSMediumGrey} #1}}
-
-% ...as well as the year
-\xpatchcmd{\NAT@citex}
-{\@citea\NAT@hyper@{\NAT@nmfmt{\NAT@nm}\NAT@date}}
-{\@citea\NAT@hyper@{\NAT@nmfmt{\NAT@nm}\NAT@nmfmt{\NAT@date}}}
-{}{\PackageWarning{LiveCoMS}{Failed to patch year format in citation}}
-
-\xpatchcmd{\NAT@citex}
-{\else\unskip\NAT@spacechar\NAT@hyper@{\NAT@date}}
-{\else\unskip\NAT@spacechar\NAT@hyper@{\NAT@nmfmt{\NAT@date}}}
-{}{\PackageWarning{LiveCoMS}{Failed to patch year format in citation}}
-
-\xpatchcmd{\NAT@citex}
-{\hyper@natlinkbreak{\NAT@aysep\NAT@spacechar}{\@citeb\@extra@b@citeb}\NAT@date}
-{\hyper@natlinkbreak{\NAT@nmfmt{\NAT@aysep\NAT@spacechar}}{\@citeb\@extra@b@citeb}\NAT@nmfmt{\NAT@date}}
-{}{\PackageWarning{LiveCoMS}{Failed to patch year format in citation}}
-
-\xpatchcmd{\NAT@citex}
-{\@citea\NAT@hyper@{\NAT@date}}
-{\@citea\NAT@hyper@{\NAT@nmfmt{\NAT@date}}}
-{}{\PackageWarning{LiveCoMS}{Failed to patch year format in citation}}
-
-\xpatchcmd{\NAT@citex}
-{{\@citeb\@extra@b@citeb}\NAT@date}
-{{\@citeb\@extra@b@citeb}\NAT@nmfmt{\NAT@date}}
-{}{\PackageWarning{LiveCoMS}{Failed to patch year format in citation}}
+%\IfFileExists{vancouver-livecoms.bst}
+%  {\bibliographystyle{vancouver-livecoms}}
+%  {\PackageWarning{elife}{vancouver-livecoms.bst not found; falling back to apalike bibliography style.}\bibliographystyle{apalike}}
+%% Make author in citation italic
+%\renewcommand{\NAT@nmfmt}[1]{{\bfseries\itshape\color{LiveCoMSMediumGrey} #1}}
+%
+%% ...as well as the year
+%\xpatchcmd{\NAT@citex}
+%{\@citea\NAT@hyper@{\NAT@nmfmt{\NAT@nm}\NAT@date}}
+%{\@citea\NAT@hyper@{\NAT@nmfmt{\NAT@nm}\NAT@nmfmt{\NAT@date}}}
+%{}{\PackageWarning{LiveCoMS}{Failed to patch year format in citation}}
+%
+%\xpatchcmd{\NAT@citex}
+%{\else\unskip\NAT@spacechar\NAT@hyper@{\NAT@date}}
+%{\else\unskip\NAT@spacechar\NAT@hyper@{\NAT@nmfmt{\NAT@date}}}
+%{}{\PackageWarning{LiveCoMS}{Failed to patch year format in citation}}
+%
+%\xpatchcmd{\NAT@citex}
+%{\hyper@natlinkbreak{\NAT@aysep\NAT@spacechar}{\@citeb\@extra@b@citeb}\NAT@date}
+%{\hyper@natlinkbreak{\NAT@nmfmt{\NAT@aysep\NAT@spacechar}}{\@citeb\@extra@b@citeb}\NAT@nmfmt{\NAT@date}}
+%{}{\PackageWarning{LiveCoMS}{Failed to patch year format in citation}}
+%
+%\xpatchcmd{\NAT@citex}
+%{\@citea\NAT@hyper@{\NAT@date}}
+%{\@citea\NAT@hyper@{\NAT@nmfmt{\NAT@date}}}
+%{}{\PackageWarning{LiveCoMS}{Failed to patch year format in citation}}
+%
+%\xpatchcmd{\NAT@citex}
+%{{\@citeb\@extra@b@citeb}\NAT@date}
+%{{\@citeb\@extra@b@citeb}\NAT@nmfmt{\NAT@date}}
+%{}{\PackageWarning{LiveCoMS}{Failed to patch year format in citation}}
 %% There, we're finally done with patching the year in citations.
 
 %
@@ -702,7 +737,7 @@
 %   \end{mdframed}
 % }
 
-\RequirePackage[colorlinks=true,allcolors=black,citecolor=LiveCoMSLightBlue,linkcolor=LiveCoMSMediumGrey,urlcolor=LiveCoMSLightBlue]{hyperref}
+\RequirePackage[colorlinks=true,allcolors=black,citecolor=LiveCoMSLightBlue,linkcolor=LiveCoMSMediumGrey,urlcolor=LiveCoMSLightBlue,breaklinks=true]{hyperref}
 \urlstyle{sf}
 
 % Other desired commands
