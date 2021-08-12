@@ -148,6 +148,8 @@ backend=biber,
 bibstyle=numeric-comp,
 giveninits=true, % use initials for given names
 sorting=none,    % print in order of citation
+date=year,       % print year only
+maxnames=3,
 url=false,
 doi=true,
 eprint=false,
@@ -161,6 +163,22 @@ isbn=false,
   [article,inbook,incollection,inproceedings,patent,thesis,unpublished]
   {doi}{
 \small\url{https://doi.org/#1}}
+
+%\DeclareNameAlias{default}{given-family}
+
+\renewbibmacro{in:}{}
+
+% Comma before date; date not in parentheses
+\renewbibmacro*{issue+date}{%
+  \setunit*{\addcomma\space}% NEW
+%  \printtext[parens]{% DELETED
+    \iffieldundef{issue}
+      {\usebibmacro{date}}
+      {\printfield{issue}%
+       \setunit*{\addspace}%
+%       \usebibmacro{date}}}% DELETED
+       \usebibmacro{date}}% NEW
+  \newunit}
 
 %\DeclareNameFormat{author}{%
 %  \ifthenelse{\value{listcount}=1}
