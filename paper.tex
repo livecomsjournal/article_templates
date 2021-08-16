@@ -177,8 +177,7 @@ you'd be astonished how many emails developers get that are directly answered in
 the manual. If the manual is short, you can read the whole thing. If it's
 longer, search for relevant-seeming keywords, scan the sections that seem to
 pertain to your error message. If there's an FAQ (frequently asked questions)
-list, check that first. Not only will that get you your solution faster, it will
-likely save you from some grumbling by the developers.
+list, check that first; asking an FAQ is likely to lead to grumbling.
 
 Next, search the internet for the error message; this works very well for
 software with thousands of users, where it might very well deserve to be the
@@ -198,7 +197,10 @@ error message itself. To be clear: as an end user, \emph{you are not obligated
 to check the code}, but it can sometimes be a good shortcut to help you either
 solve your problem on your own or give the developers what they need to solve
 it. Moreover, if you do solve the problem, it's a good idea to share your
-solution with the developers; most will be grateful to you for your help.
+solution with the developers; most will be grateful to you for your help, and
+they have comments or improvements suggested improvements. If the package is
+hosted on GitHub, consider opening a pull request so your solution can be merged
+into the main branch.
 
 \subsection{Ask for help in the right place}
 
@@ -254,6 +256,8 @@ elsewhere. For example, for a bug report one should
 
     \item Give steps necessary to reproduce the bug.
 
+    \item Give the version of the code you're using.
+
     \item Describe the platform you're running on (e.g. the operating system for
     a conventional computer, hardware if it's a tablet, etc.). If the problem is
     related to building or installing the software, describe the build system
@@ -261,11 +265,27 @@ elsewhere. For example, for a bug report one should
 
 \end{itemize}
 
-For a feature request, you would also describe what you hope to accomplish and
-how you'd like to see it work, as well as any current workaround you've
-developed.
+Sometimes, the developer will be able to answer your question based on the first
+email. However, their reply will often contain questions or suggestions for
+things to test. \emph{It is crucial that you read this message carefully, and
+answer all of the questions to the best of your ability when you reply.} As a
+rule, these questions aren't asked idly; the person providing support is trying
+to help you! Far too often, users don't read the reply email carefully, don't
+answer the questions, try only the first suggestion, or refuse to indicate what
+it is they were actually doing. If you do this, the best case is that it will
+take longer for you to get to a solution. More likely, you will frustrate the
+person trying to help you, and they may become reluctant to work on your issue.
 
-However, writing the initial bug report is only the first step.
+Feature requests are similar: you need to describe what you hope to accomplish
+and how you'd like to see it work, as well as any current workaround you've
+developed. Keep in mind that many features sound easy, but there can be deep
+design issues that make their implementation difficult. Moreover, it is possible
+that the developer won't be enthusiastic about your idea, even if it is doable
+--- for example, it might not coincide with their vision for the software. Or,
+as discussed above, academic developers are generally not compensated for their
+work (obtaining NIH funds to support software development is extremely
+difficult) and simply might not have the time to work on new features.
+
 
 \subsection{Contribute to the community}
 
@@ -274,12 +294,13 @@ However, writing the initial bug report is only the first step.
 This should go without saying, but if you're asking for help it behooves you to
 do so respectfully. We're not saying that you need to be obsequious. Rather,
 approach every interaction with respect: respect for people's time, respect for
-their ideas, respect for their identity. If you're asking for help, do so with
-the perspective that the developer is volunteering their time to help you, with
-minimal payoff to them.  If you're reporting a bug, you're almost certainly
-frustrated; try not to take that frustration out on the developers. If you're
-offering a new feature, keep in mind that it may not align with the developers'
-vision for where the software is going.
+their ideas, respect for their identity (including among other things race,
+ethnicity, country, sex or gender, or career stage). If you're asking for help,
+do so with the perspective that the developer is volunteering their time to help
+you, with minimal payoff to them.  If you're reporting a bug, you're almost
+certainly frustrated; try not to take that frustration out on the developers. If
+you're offering a new feature, keep in mind that it may not align with the
+developers' vision for where the software is going.
 
 If you're interacting with fellow users in a support forum, don't mock
 questioners who are less experienced than you --- a question may seem foolish to
@@ -289,13 +310,18 @@ is frustrating and exhausting; one of our goals for this document is that it
 become a resource to educate new users of expected norms without consuming
 developers' time and mental bandwidth.
 
+
 \section{Obligations of software developers}
 
 This paper has focused on what software consumers should do when asking for
-help.  However, this does not mean that the developers of scientific software
-are without responsibilities. If we want users to behave in a certain way, it
-behooves us to tell them that. Users approaching us in good faith deserve to be
-treated fairly and courteously.
+help.  I suppose it could even be read as a list of complaints about bad
+behavior by users (though that's not how I intend it). However, each behavior
+described above has a corresponding expectation for the developers.
+
+However, this does not mean that the developers of scientific
+software are without responsibilities. If we want users to behave in a certain
+way, it behooves us to tell them that. Users approaching us in good faith
+deserve to be treated fairly and courteously.
 
 connect to open science: FAIR principles say developers should want code to be
 reusable. Publishing the code isn't enough, you need to make it usable as well.
@@ -311,9 +337,16 @@ don't feel welcome?) This doesn't just mean use of epithets in messages (though
 that's clearly unacceptable). Keep an eye on how things are named, on jokes
 present in the code or messages, on whose opinions are listened to and who is
 ignored.  Above all, if someone tells you a particular behavior or situation is
-harmful, \emph{believe them}. Something that feels minor (or is just  a joke) to
+harmful, \emph{believe them}. Something that feels minor (or is just a joke) to
 you may hit others very differently, and part of respect is understanding and
 accounting for that.
+
+Moreover, it's not enough for you as a developer to treat people with respect.
+To the extent that there's a community around your software, you must attempt to
+make sure that community is respectful; as developer, your words and deeds carry
+significant weight. If you call out bad behavior (or even marginal behavior),
+that will go a long way towards setting a good tone for your community. If you
+let it slide, chances are others will assume you implicitly endorse it.
 
 \section{Checklists}
 % Here is a single-column checklist that consists of multiple sub-checklists
@@ -391,7 +424,7 @@ see the GitHub issue tracking and changelog at \githubrepository.
 
 
 % We suggest you preserve this comment:
-For a more detailed description of contributions from the community and others, see the GitHub issue tracking and changelog at \githubrepository.
+For a more detailed description of contributions from the community and others, see the GitHub issue tracking and Changelog at \githubrepository.
 
 \section{Potentially Conflicting Interests}
 %%%%%%%
@@ -405,7 +438,7 @@ and Atelerix Life Sciences.
 %%%%%%%
 % Authors should acknowledge funding sources here. Reference specific grants.
 %%%%%%%
-This work supported in part by NIH R21GM138970 to AG.
+This work supported in part by NIH R21GM138970 to Alan Grossfield.
 
 \section*{Author Information}
 \makeorcid
