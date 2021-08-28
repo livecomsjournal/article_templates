@@ -80,7 +80,7 @@
 Software is ubiquitous in modern science --- almost any project, in almost any
 discipline, requires some code to work. However, many (or even most) scientists
 are not programmers, and must rely on programs written and maintained by others.
-As a result, a crucial but often neglected part of a scientist's training is
+A crucial but often neglected part of a scientist's training is
 learning how to use new tools, and how to exist as part of a community of users.
 This article will discuss key behaviors that can make the experience quicker,
 more efficient, and more pleasant for the user and developer alike.
@@ -99,18 +99,17 @@ Most practicing scientists (even the ones who write code as part of their
 research) spend more time as consumers as opposed to producers of software.
 Moreover, we are constantly learning new skills and solving new problems, which
 often means learning to use new programs or new aspects of large packages. This,
-combined with the complex nature of scientific software (and the often low
-quality of the associated documentation) means we have to ask for help.
-Sometimes it's because we don't know how to accomplish a specific task. Others,
-it's because there's a feature we need that isn't implemented. Inevitably, there
-are bugs.
+combined with the complex nature of scientific software (and often the missing
+or inaccurate documentation) means we have to ask for help.  Sometimes it's
+because we don't know how to accomplish a specific task. Others, it's because
+there's a feature we need that isn't implemented. Inevitably, there are bugs.
 
 In all of these cases, it is necessary to interact with the people who develop
 and support the code. How you go about it has an enormous impact on your
-likelihood of success and how you are viewed. Asking complete strangers for
-help is often intimidating, especially the first time you do it. However, the
-best way to do so is rarely taught explicitly --- at best, it's something one
-picks up by example, from fellow lab members or the PI.  {\emph The goal of this
+likelihood of success and how you are viewed. Asking complete strangers for help
+is often intimidating, especially the first time you do it. However, the best
+way to do so is rarely taught explicitly --- at best, it's something one picks
+up by example, from fellow lab members or your PI.  {\emph The goal of this
 paper is to reveal the hidden curriculum -- what's expected of a software
 consumer, how to ask for help, how to contribute productively to a software
 community (regardless of whether you can write code).}
@@ -177,12 +176,24 @@ you'd be astonished how many emails developers get that are directly answered in
 the manual. If the manual is short, you can read the whole thing. If it's
 longer, search for relevant-seeming keywords, scan the sections that seem to
 pertain to your error message. If there's an FAQ (frequently asked questions)
-list, check that first; asking an FAQ is likely to lead to grumbling.
+list, check that first; asking an FAQ, especially in a public forum, is likely
+to lead to grumbling.
 
 Next, search the internet for the error message; this works very well for
 software with thousands of users, where it might very well deserve to be the
 first option. It is less effective with less common packages, but it's an easy
 thing to check, so you'd be foolish to skip it.
+
+One valuable strategy is to construct a minimal set of circumstances that causes
+the problem. Even if you initially encountered the problem while analyzing a 2
+TB data set, that's not going to be very helpful for diagnosing the problem (and
+you won't easily be able to share the data set with the developers so they can
+diagnose it). Can you reproduce the problem using only a small portion of the
+data? Is the problem present with some kinds of data (e.g. some frames of the
+trajectory) but not others, and if so what is different about those frames? Can
+you make the problem appear and disappear with small changes in the settings?
+Testing these things out may lead you to a solution, but even if they don't
+they'll help you describe the problem more precisely to the developers.
 
 Finally, you can consider diving into the code. This decision depends very much
 on the complexity of the package, your skill level, and how urgently you need
@@ -263,7 +274,7 @@ elsewhere. For example, for a bug report one should
     \item Describe the platform you're running on (e.g. the operating system for
     a conventional computer, hardware if it's a tablet, etc.). If the problem is
     related to building or installing the software, describe the build system
-    (e.g. compiler version) or package manager (e.g. Conda\cite{ANACONDA}).
+    (e.g. compiler version) or package manager (e.g. Conda\cite{CONDA}, Homebrew \cite{HOMEBREW}).
 
 \end{itemize}
 
@@ -318,16 +329,25 @@ looking for ways to contribute back. This can take many forms, not all of which
 involve writing code (though of course contributing bug fixes or new features is
 extremely valuable). You can work on the documentation --- if you struggled to
 understand something but eventually figured it out, consider contributing a new
-paragraph of text; many packages hosted on GitHub have the documentation in the
+paragraph of text. Many packages hosted on GitHub have the documentation in the
 same repository, so the same pull request mechanism can be used, but even if the
 docs are separate you could write a new paragraph or two and send them to the
 developer. If you developed a toy example as you were figuring out how to use
 the software, consider sharing it. If one of the provided examples had to be
 tweaked to work, share the tweaks. If the software has an online forum (e.g.
 mailing list, GitHub discussions or issues, etc), you might be able to
-contribute by suggestion solutions to problems from less experienced users.
-However, unlike the other recommentations, this one isn't mandatory --- it's a
-``nice to have'' rather than a ``must have''.
+contribute by answering questions from less experienced users.
+
+Unlike the other recommentations, this one isn't mandatory --- it's a ``nice to
+have'' rather than a ``must have''. However, there are a number of advantages to
+doing it. First and foremost, you'll be making a package that's valuable to you
+stronger, which will help you with your own scientific projects. However,
+participating productively in a software community is also a good way to build
+your scientific communication skills. Finally, helping others is an excellent
+way for a relatively junior scientist to build their reputation in the
+community, which in turn can lead to future collaborations or even job
+opportunities. At the very least, it's always valuable when a lot of people in
+your field have positive associations with your name.
 
 \section{Obligations of software developers}
 
@@ -380,6 +400,14 @@ developer, your words and deeds carry significant weight. If you call out bad
 behavior (or even marginal behavior), that will go a long way towards setting a
 good tone for your community. If you let it slide, chances are others will
 assume you implicitly endorse it.
+
+If the justice perspective doesn't persuade you, consider the practical
+consequences. Bad behavior on the part of developers of your project (or your
+community in general) will drive users and developers away from you. If
+interacting with your community is unpleasant, folks will either use alternative
+codes or use your code but not cite you. The next person with an idea for an
+innovative new feature will add it to a different package, or won't do it at
+all (hurting the whole community). Ask yourself: can your project really afford to drive away talented hard-working people eager to help? Is it worth is, just so a few people don't have to engage with basic courtesy?
 
 \section{Checklists}
 % Here is a single-column checklist that consists of multiple sub-checklists
