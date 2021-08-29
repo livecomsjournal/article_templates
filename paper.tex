@@ -109,7 +109,7 @@ and support the code. How you go about it has an enormous impact on your
 likelihood of success and how you are viewed. Asking complete strangers for help
 is often intimidating, especially the first time you do it. However, the best
 way to do so is rarely taught explicitly --- at best, it's something one picks
-up by example, from fellow lab members or your PI.  {\emph The goal of this
+up by example, from fellow lab members or your PI.  \emph{The goal of this
 paper is to reveal the hidden curriculum -- what's expected of a software
 consumer, how to ask for help, how to contribute productively to a software
 community (regardless of whether you can write code).}
@@ -195,6 +195,13 @@ you make the problem appear and disappear with small changes in the settings?
 Testing these things out may lead you to a solution, but even if they don't
 they'll help you describe the problem more precisely to the developers.
 
+Along the same lines, it is often valuable to construct a fake or minimal data
+set where the correct answer is known (or easily computed outside the program).
+This is particularly important when your concern is for the program's
+correctness. This is particularly important when your concern is that the
+program is producing incorrect answers due to a coding error or assumptions
+incompatible with the input data.
+
 Finally, you can consider diving into the code. This decision depends very much
 on the complexity of the package, your skill level, and how urgently you need
 the solution. More often than not, comprehending the whole software package will
@@ -265,7 +272,8 @@ elsewhere. For example, for a bug report one should
     \item Describe the bug, including the expected behavior and how the current
     behavior differs.
 
-    \item Give steps necessary to reproduce the bug.
+    \item Give steps necessary to reproduce the bug. Include any input data
+    required.
 
     \item Give the version of the code you're using. If you've changed anything,
     say what you've changed. If there are compile-time options, say what you
@@ -307,12 +315,12 @@ This should go without saying, but if you're asking for help it behooves you to
 do so respectfully. We're not saying that you need to be obsequious. Rather,
 approach every interaction with respect: respect for people's time, respect for
 their ideas, respect for their identity (including among other things race,
-ethnicity, country, sex or gender, or career stage). If you're asking for help,
-do so with the perspective that the developer is volunteering their time to help
-you, with minimal payoff to them.  If you're reporting a bug, you're almost
-certainly frustrated; try not to take that frustration out on the developers. If
-you're offering a new feature, keep in mind that it may not align with the
-developers' vision for where the software is going.
+ethnicity, country, native language, sex or gender, or career stage). If you're
+asking for help, do so with the perspective that the developer is volunteering
+their time to help you, with minimal payoff to them.  If you're reporting a bug,
+you're almost certainly frustrated; try not to take that frustration out on the
+developers. If you're offering a new feature, keep in mind that it may not align
+with the developers' vision for where the software is going.
 
 If you're interacting with fellow users in a support forum, don't mock
 questioners who are less experienced than you --- a question may seem foolish to
@@ -389,6 +397,14 @@ to and who is ignored.  Above all, if someone tells you a particular behavior or
 situation is harmful, \emph{believe them}.  Something that feels minor (or is
 just a joke) to you may hit others very differently, and part of respect is
 understanding and accounting for that.
+
+It's also important to recognize that even while English has become the default
+language for science, not everyone is a native speaker, which means that some
+jargon, abbreviations, and idioms may be incomprehensible to a fair portion of
+your community. Moreover, an awkwardly worded question often reflects lack of
+familiarity with the language rather than laziness or ignorance. It's important
+to keep accessibility in mind while creating documentation or interacting with
+users in a forum.
 
 Along the same lines, a developer who berates a user for asking a stupid
 question, or is rude and dismissive in a technical discussion about a new
@@ -482,7 +498,9 @@ see the GitHub issue tracking and changelog at \githubrepository.
 % See the policies ``Policies on Authorship'' section of https://livecoms.github.io for
 % more information on deciding on authorship and author order.
 %%%%%%%%%%%%%%%
-Dr. Tod D. Romo commented on a draft of this document.
+Dr. Tod D. Romo reviewed the document for style and content. Dr. Justin Lemkul
+made numerous helpful suggestions, particularly regarding language
+accessibility.
 
 % We suggest you preserve this comment:
 For a more detailed description of contributions from the community and others, see the GitHub issue tracking and Changelog at \githubrepository.
