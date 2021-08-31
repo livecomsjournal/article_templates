@@ -165,24 +165,28 @@ the major skills one develops when learning to do computational research.
 
 The first step is to read the error message carefully, if there is one; this
 obviously doesn't apply in all cases, but it's often applicable and far too
-often skipped. It's true that many software packages have cryptic unhelpful
+often skipped. It's true that many software packages have cryptic or unhelpful
 error messages, but far too often people write for help when the solution is
 right in front of them. If the error message says ``Could not open file
 foo.dat'', it's worth checking whether there is a file called ``foo.dat'' and if
 not figuring out what was supposed to create it.
 
-The second step is to check the manual. This might seem trivially obvious, but
-you'd be astonished how many emails developers get that are directly answered in
-the manual. If the manual is short, you can read the whole thing. If it's
-longer, search for relevant-seeming keywords, scan the sections that seem to
-pertain to your error message. If there's an FAQ (frequently asked questions)
+The second step is to check the manual. This too might seem trivially obvious,
+but you'd be astonished how many emails developers get that are directly
+answered in the manual. If the manual is short, you can read the whole thing. If
+it's longer, search for relevant-seeming keywords, scan the sections that seem
+to pertain to your error message. If there's an FAQ (frequently asked questions)
 list, check that first; asking an FAQ, especially in a public forum, is likely
 to lead to grumbling.
 
 Next, search the internet for the error message; this works very well for
 software with thousands of users, where it might very well deserve to be the
 first option. It is less effective with less common packages, but it's an easy
-thing to check, so you'd be foolish to skip it.
+thing to check, so you'd be foolish to skip it.  Search for the whole text of
+the error (excluding any verbiage that looks like it depends on the compiler,
+etc), with and without the package name. The latter can be important in the case
+where the problem isn't with the package per se, but with something else in your
+setup.
 
 One valuable strategy is to construct a minimal set of circumstances that causes
 the problem. Even if you initially encountered the problem while analyzing a 2
@@ -501,7 +505,8 @@ see the GitHub issue tracking and changelog at \githubrepository.
 %%%%%%%%%%%%%%%
 Dr. Tod D. Romo reviewed the document for style and content. Dr. Justin A.
 Lemkul made numerous helpful suggestions, particularly regarding language
-accessibility. Dr. David H. Mathews provided several editorial suggestions.
+accessibility. Dr. David H. Mathews provided several editorial suggestions. Dr.
+Jeffrey Lewis had suggestions regarding searching for help.
 
 % We suggest you preserve this comment:
 For a more detailed description of contributions from the community and others, see the GitHub issue tracking and Changelog at \githubrepository.
