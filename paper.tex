@@ -248,10 +248,11 @@ instructions, which will make them less inclined to help you.
 \subsection{Write a good bug report}
 
 The next step in the process is to actually communicate your issue with the
-developers, generally in the form of a bug report.  Doing so effectively
-requires striving for two somewhat contradictory goals: you must give the
-developer all of the relevant information about the problem, as concisely as
-possible.
+developers, generally in the form of a bug report.  The challenges in writing an
+effective bug report have been discussed before in the context of free software
+\cite{Raymond, Tatham}.  Doing so requires striving for two somewhat
+contradictory goals: you must give the developer all of the relevant information
+about the problem, as concisely as possible.
 
 Taking the first part first: this is hard, because as a user you're usually not
 an expert, \emph{so you don't know what's relevant}. The only way to know for
@@ -290,6 +291,14 @@ elsewhere. For example, for a bug report one should
 
 \end{itemize}
 
+Following this format (or something similar) makes it much easier for the
+developer to diagnose your problem, and the easier you make it the more likely
+they are to solve your problem quickly. While it's not ideal behavior, busy
+developers (particularly those for whom software support is a side activity) may
+shy away from starting work on a problem that looks hard or uninviting, while a
+clear concise description of the problem is more likely to spur immediate
+action.
+
 Sometimes, the developer will be able to answer your question based on the first
 email. However, their reply will often contain questions or suggestions for
 things to test. \emph{It is crucial that you read this message carefully, and
@@ -306,12 +315,15 @@ who won't help me help them.
 Feature requests are similar: you need to describe what you hope to accomplish
 and how you'd like to see it work, as well as any current workaround you've
 developed. Keep in mind that many features sound easy, but there can be deep
-design issues that make their implementation difficult. Moreover, it is possible
-that the developer won't be enthusiastic about your idea, even if it is doable
---- for example, it might not coincide with their vision for the software. Or,
-as discussed above, academic developers are generally not compensated for their
-work (obtaining NIH funds to support software development is extremely
-difficult) and simply might not have the time to work on new features.
+design issues or technical nuances that make their implementation difficult.
+Moreover, it is possible that the developer won't be enthusiastic about your
+idea, even if it is doable --- for example, it might not coincide with their
+vision for the software. Or, as discussed above, academic developers are
+generally not compensated for their work (obtaining NIH funds to support
+software development is extremely difficult) and simply might not have the time
+to work on new features. For these reasons, do not be surprised or insulted if
+the developers suggest you work on a particular solution yourself and submit a
+pull request. This doesn't mean they dislike your idea, just that they're busy -- they'll help guide you as best they can, but they can't do the work themselves.
 
 \subsection{Treat people with respect}
 
@@ -336,30 +348,33 @@ developers' time and mental bandwidth.
 
 \subsection{Contribute to the community}
 
-Once you've become reasonably competent with a piece of software, it's worth
-looking for ways to contribute back. This can take many forms, not all of which
-involve writing code (though of course contributing bug fixes or new features is
-extremely valuable). You can work on the documentation --- if you struggled to
-understand something but eventually figured it out, consider contributing a new
-paragraph of text. Many packages hosted on GitHub have the documentation in the
-same repository, so the same pull request mechanism can be used, but even if the
-docs are separate you could write a new paragraph or two and send them to the
-developer. If you developed a toy example as you were figuring out how to use
-the software, consider sharing it. If one of the provided examples had to be
+Once you've begun using a piece of software, it's worth looking for ways to
+contribute back.  This can take many forms, not all of which involve writing
+code (though of course contributing bug fixes or new features is extremely
+valuable). You don't have to be particularly expert -- sometimes the best
+documentation comes from the inexperienced or newly experienced users, who
+vividly remember not understanding something in the manual and can suggest
+revisions that would make it clearer.  Many packages hosted on GitHub have the
+documentation in the same repository, so the same pull request mechanism can be
+used, but even if the docs are separate (or if you find the idea of a pull
+request intimidating) you could write a new paragraph or two and send them to
+the developer. If you developed a toy example as you were figuring out how to
+use the software, consider sharing it. If one of the provided examples had to be
 tweaked to work, share the tweaks. If the software has an online forum (e.g.
 mailing list, GitHub discussions or issues, etc), you might be able to
 contribute by answering questions from less experienced users.
 
-Unlike the other recommentations, this one isn't mandatory --- it's a ``nice to
+Unlike the other recommendations, this one isn't mandatory --- it's a ``nice to
 have'' rather than a ``must have''. However, there are a number of advantages to
 doing it. First and foremost, you'll be making a package that's valuable to you
-stronger, which will help you with your own scientific projects. However,
-participating productively in a software community is also a good way to build
-your scientific communication skills. Finally, helping others is an excellent
-way for a relatively junior scientist to build their reputation in the
-community, which in turn can lead to future collaborations or even job
-opportunities. At the very least, it's always valuable when a lot of people in
-your field have positive associations with your name.
+stronger, which will help you with your own scientific projects, while getting
+feedback from leading experts in the field. However, participating productively
+in a software community is also a good way to build your scientific
+communication skills. Finally, helping others is an excellent way for a
+relatively junior scientist to build their reputation in the community, which in
+turn can lead to future collaborations or even job opportunities. At the very
+least, it's always valuable when a lot of people in your field have positive
+associations with your name.
 
 \section{Obligations of software developers}
 
@@ -376,10 +391,11 @@ information we need, we should tell people what kinds of information we need
 need to document the appropriate way to cite the software. All of this
 information needs to be clearly written out and easy to find.
 
-Doing these things is valuable from a practical perspective; making it easy for
-people to interact with us efficiently, even if it costs us some effort up
-front, will make those interactions more pleasant. Even setting that aside, it's
-the right way to do science --- FAIR principles for software development
+Doing these things is valuable from a practical perspective, as discussed
+elsewhere \cite{Heister-2013, Laayouni-2016}; making it easy for people to
+interact with us efficiently, even if it costs us some effort up front, will
+make those interactions more pleasant. Even setting that aside, it's the right
+way to do science --- FAIR principles for software development
 \cite{Lamprecht-2020} prioritize not just releasing code, but making it useable.
 That means documenting it well and supporting people who try to use it.
 
@@ -429,6 +445,33 @@ innovative new feature will add it to a different package, or won't do it at all
 (hurting the whole community). Ask yourself: can your project really afford to
 drive away talented hard-working people eager to help? Is it worth it, just so a
 few people don't have to engage with basic courtesy?
+
+Sometimes, code is published that is not particularly intended for use. For
+example, it is good practice to release the scripts used to analyze data in
+connection with the paper publishing the data, but many of these scripts are
+one-offs, and the authors have little incentive to polish them to the point of
+general useability. Rather, the scripts are essentially there as documentation,
+not turn-key programs for others to use. In this case, the authors have less of
+an obligation to provide support, although at a minimum laying out the software
+necessary to run it (e.g. versions of python and numpy, or a Makefile and
+compiler version) should be required.  That said, we recognize that some bit rot
+is expected with academic code; once the student who wrote the code graduates
+and moves on, it's very possible that there is no one else to maintain it.
+Solving the long-term support and maintenance problem for academic software is a
+major problem, well beyond the scope of this manuscript.
+
+\section{Summary}
+
+Given the importance of software to modern science and the challenges in writing
+high quality code, virtually all working scientists will need to ask for help
+from time to time. The keys to doing so effectively are remarkably simple: ask
+your questions succinctly and only after putting in some effort to solve the
+problem yourself, be considerate of other people's time and effort, and look for
+opportunities to contribute back to the community. Developers should make it
+easy for users to behave this way by providing clear documentation (including
+the appropriate venues to ask for help), encouraging participation, and
+insisting on respectful behavior from users and developers alike.
+
 
 \section{Checklists}
 % Here is a single-column checklist that consists of multiple sub-checklists
@@ -507,6 +550,8 @@ Dr. Tod D. Romo reviewed the document for style and content. Dr. Justin A.
 Lemkul made numerous helpful suggestions, particularly regarding language
 accessibility. Dr. David H. Mathews provided several editorial suggestions. Dr.
 Jeffrey Lewis had suggestions regarding searching for help.
+
+The cover image was created by artistfymo (\url{https://linktr.ee/ArtistFrmYO}).
 
 % We suggest you preserve this comment:
 For a more detailed description of contributions from the community and others, see the GitHub issue tracking and Changelog at \githubrepository.
