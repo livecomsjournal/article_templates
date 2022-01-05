@@ -1,0 +1,201 @@
+------------------------------------------------------
+Reviewer A:
+Recommendation: Revisions Required
+
+------------------------------------------------------
+
+
+Significance
+
+The article will (hopefully) have a very positive impact on users and
+developers of scientfic software.
+Community
+
+The paper is primarily based on the authors own experience and light on scholarly exposition.
+Professionalism
+
+A well written article, a pleasure to read.
+Article-Specific Review Criteria
+
+The article specifies the target audience's expected level of
+familiarity with scientific software communities, namely very little
+as a novice.
+
+
+* Does the manuscript cover material of significance for
+computational molecular scientists?
+
+yes
+
+* Is the target audience clearly identified, appropriate, and
+likely to benefit from the manuscript?
+
+yes
+
+* Is the level of detail, explanation, and graphical illustration
+sufficient to ensure clarity for the proposed target audience?
+
+yes
+
+* Does the manuscript point to additional resources, including a
+range of software implementations, more fundamental or auxiliary
+theoretical reference?
+
+not much
+
+* Does the manuscript clearly indicate approximations employed in
+the formulation presented, as well as any other possible sources
+of error in implementations of the material?
+
+n/a
+Other Specific Comments for the Author
+
+The timely article by Grossfield should be required reading for anyone
+participating in software projects in the scientific community.
+
+
+1) My biggest concern is simply that the people who ought to read it,
+won't do so (even if directed) because it is longer than what users
+typical want to read when they are in search of a fix to their
+problem. In this the article shares the same shortcoming with the
+well-known online essays [1] and [2].
+
+I'd like a condensed summary of about one paragraph (maybe as a
+box) that I can just paste in an email or put on a website,
+together with a link to the full version. 
+
+
+[1] Eric S. Raymond, "How To Ask Questions The Smart Way"
+http://catb.org/~esr/faqs/smart-questions.html
+[2] Simon Tatham, "How to Report Bugs Effectively"
+https://www.chiark.greenend.org.uk/~sgtatham/bugs.html
+
+
+2) Does the author make a distinction between software that is
+advertised as useable (e.g. through project websites, presence of
+forums, issue tracker, ...) and software that has been made
+available (archive, repository, supplementary material)?
+
+Can and should a user assume that a developer of the latter will
+provide any support?
+
+Perhaps this could be made clearer.
+
+My personal view is that FAIR principles of research make it
+essential that code is published together with the research (code
+dump with a license). However, for code dumps I wouldn't require
+authors to respond to more than the most fundamental inquiries
+(e.g., to respond when bugs are found that question the integrity
+of the published research). If more is demanded of authors then
+that disincentivizes publishing the code with the research.
+
+On the other hand, if code is advertised (presumably with the
+expectation of citations or some other benefit to the developer)
+then I agree with the author that developers owe their users some
+of their time.
+
+3) "Please open a PR" (or merge request) is a phrase that can strike
+fear in the heart of a novice. It might be helpful to demystify
+this important part of collaborative software development. Maybe
+the a PLoS Comp Biol article [5] or something similar that touches
+upon basic software engineering that could provide more guidance.
+
+4) It might be useful to prepare the new community member that
+conversations — although respectfule — are often to the point and
+that most developers won't sugar-coat their words: if something is
+wrong, it will be said just like that because ultimately developers
+are concerned with maintaining the health of the code base and the
+project and have to be clear about what is acceptable. 
+
+New users should not feel offended by the phrase "Feel free to work
+on it, submit a PR, and we can discuss there." or similar. Unless
+you pay the developers to implement what you want, they will likely
+encourage you to do most of the work yourself and then spend some
+of their scarce time guiding you to a solution.
+
+5) Pointing out how much one can learn by interacting with experienced
+developers is important. This is a chance to learn from the best
+people in the field.
+
+Furthermore, the networks that you build as part of a software
+project might last you a life time.
+
+6) I appreciate that the article primarily originates in the
+experience of the author. I would nevertheless find it useful if,
+where possible, other sources could also be cited as validation and
+to show that indeed these are broadly shared values.
+
+I found the following references useful but I am emphatically not
+implying that they must be included in the article.
+
+Ref [3] has a good section on the importance of communities.
+
+[3] W. Bangerth and T. Heister, “What makes computational open
+source software libraries successful?,” Computational Science &
+Discovery, vol. 6, no. 1, p. 015010, 2013.
+
+[4] G. M. Dall’Olio, J. Marino, M. Schubert, K. L. Keys, M. I. Stefan, C. S. Gillespie, P. Poulain, K. Shameer, R. Sugar, B. M. Invergo, L. J. Jensen, J. Bertranpetit,
+and H. Laayouni, “Ten simple rules for getting help from online
+scientific communities,” PLoS Comput Biol, vol. 7, p. e1002202,
+Sep 2011.
+
+[5] Y. Perez-Riverol, L. Gatto, R. Wang, T. Sachsenberg, J. Uszkoreit, F. d. V. Leprevost, C. Fufezan, T. Ternent, S. J. Eglen, D. S. Katz, T. J. Pollard, A. Konovalov, R. M. Flight, K. Blin,
+and J. A. Vizca ́ıno, “Ten simple rules for taking advantage of git
+and github,” PLoS Comput Biol, vol. 12, p. e1004947, 07 2016.
+------------------------------------------------------
+
+
+
+------------------------------------------------------
+Reviewer B:
+Recommendation: Revisions Required
+
+------------------------------------------------------
+
+
+Significance
+
+The paper provides suggestions on an area of computational research that is often overlooked. I believe the article would be a very welcomed addition to the journal and useful to the community.
+Community
+
+The paper provides suggestions based on common sense and the experience of the author that are often overlooked by both users and developers alike.
+Professionalism
+
+The paper is well-written. There is just a small typo on page 1 - " is written from a the perspective ": remove " a ". Also, the authors might consider collapsing the "good" and "poor community member" checklist into a single one.
+Article-Specific Review Criteria
+
+The article satisfies the additional criteria for training articles.
+Other Specific Comments for the Author
+
+I only have a couple of very minor suggestions.
+
+1) This point is already implicitly transparent throughout the paper, but it might be useful to state this more explicitly right in Section 3.1 as it (partially) motivates everything that follows: The easier you make it for the developer to narrow down/reproduce the issue the higher the chance they will help you. I think it's worth pointing out that developers are usually handling multiple issues at the same time and typically tend to assign lower priority to issues that are harder and time-consuming.
+
+2) In section 3.5 it is stated: "Once you’ve become reasonably competent with a piece of software, it’s worth looking for ways to contribute back. [...] You can work on the documentation". This is a wonderful suggestion. However, I'm afraid that stated this way, users that don't feel competent enough will be hesitant/justified in contributing. I believe proposing small changes to the documentation often does not require competency. On the contrary, devs and experienced users typically take for granted a lot of things that might be missing from the docs. My point is that it might be a good idea to rephrase a bit to encourage even first users to propose changes to the docs as the best way to give back some of the time the devs/community has dedicated to them.
+------------------------------------------------------
+
+
+
+------------------------------------------------------
+Reviewer C:
+Recommendation: Accept Submission
+
+------------------------------------------------------
+
+
+Significance
+
+The article seems to fall in line with the journal’s scope, providing insights on how to be a good member of scientific software community. Being a computational scientist and not a native coder, this article impacted me very positively.
+Community
+
+Author has addressed current understand in the scholarly community based on his experience in detail.
+Professionalism
+
+No changes at all.
+Article-Specific Review Criteria
+
+yes
+Other Specific Comments for the Author
+
+Great job Alan. I can't wait to share this article with my fellows.
+------------------------------------------------------
