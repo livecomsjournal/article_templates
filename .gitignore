@@ -181,3 +181,6 @@ TSWLatexianTemp*
 *~[0-9]*
 
 *.tmp
+
+# OS X cruft
+.DS_Store
