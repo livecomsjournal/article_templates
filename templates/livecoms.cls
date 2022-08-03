@@ -52,9 +52,6 @@
 \newif\if@pubversion
 \DeclareOption{pubversion}{\@pubversiontrue}
 
-\newif\if@ASAPversion
-\DeclareOption{ASAPversion}{\@ASAPversiontrue}
-
 %% Linespacing.
 \newif\if@onehalfspacing
 \newif\if@doublespacing
@@ -278,15 +275,7 @@
 
 %--------------------------------------------------------
 % Footers
-% 1. Error Check for conflicting class options
-\if@pubversion
-  \if@ASAPversion
-      \ClassError{livecoms}
-      {Nope nope nope, you cannot invoke 'pubversion' and 'ASAPversion' simultaneously. Please correct the class options.}
-  \fi
-\fi
-% 2. Publication Version: put submission/acceptance dates in left footer and citation information in right footer
-%%% DWS NOTE: would be nice if the left footer was in an if A-or-B type logical statement
+% 1. Publication Version: put submission/acceptance dates in left footer and citation information in right footer
 \if@pubversion
   \lfoot{\ifthenelse{\value{page}=1}
     {\small\color{LiveCoMSMediumGrey}Received: \@publisheddatereceived \\ Accepted: \@publisheddateaccepted}
@@ -296,17 +285,7 @@
     {\it Living J. Comp. Mol. Sci.} \@publishedyear, \@publishedvolume\nobreak\hspace{.05em}(\@publishedissue), \@publishedarticlenum
   }%
 \fi
-% 3. ASAP Version: put submission/acceptance dates in left footer and "ASAP Version" in right footer
-\if@ASAPversion
-  \lfoot{\ifthenelse{\value{page}=1}
-    {\small\color{LiveCoMSMediumGrey}Received: \@publisheddatereceived \\ Accepted: \@publisheddateaccepted}
-    {~\\~}
-  }%
-  \rfoot{\small\color{LiveCoMSMediumGrey}\href{https://doi.org/\@publishedDOI}{https://doi.org/\@publishedDOI}\\
-    {\it Living J. Comp. Mol. Sci.} ASAP Version
-  }%
-\fi
-% 4. Page Number in center of footer
+% 2. Page Number in center of footer
 \cfoot{\small\color{white} \vspace{\baselineskip} \small\color{LiveCoMSMediumGrey} \thepage\space of\space\pageref{LastPage}}%
 \preto{\footrule}{\color{LiveCoMSMediumGrey}}
 \renewcommand{\headrulewidth}{0pt}% % No header rule
