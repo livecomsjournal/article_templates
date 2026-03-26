@@ -53,6 +53,10 @@
 \newif\if@pubversion
 \DeclareOption{pubversion}{\@pubversiontrue}
 
+%Review Version (includes line numbers to aid reviewers)
+\newif\if@reviewversion
+\DeclareOption{reviewversion}{\@reviewversiontrue}
+
 %% Linespacing.
 \newif\if@onehalfspacing
 \newif\if@doublespacing
@@ -68,7 +72,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{mdframed}
 
-\RequirePackage{lineno}
+\RequirePackage[pagewise,switch]{lineno}
 \if@reqslineno\linenumbers\fi
 
 \ifxetexorluatex
@@ -274,6 +278,15 @@
   \appto{\@publisheddateaccepted}{#1}{}{}
 }
 
+%--------------------------------------------------------
+% Reviewer Aids
+\if@reviewversion
+  \if@pubversion
+      \ClassError{livecoms}
+      {Nope nope nope, you cannot invoke 'reviewversion' and 'pubversion' simultaneously. Please correct the class options.}
+  \fi
+  \linenumbers
+\fi
 %--------------------------------------------------------
 % Footers
 % 1. Publication Version: put submission/acceptance dates in left footer and citation information in right footer
