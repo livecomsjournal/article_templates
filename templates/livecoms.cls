@@ -10,6 +10,7 @@
 \RequirePackage{etoolbox}
 \RequirePackage{regexpatch}
 \RequirePackage{ifxetex,ifluatex}
+\RequirePackage[hyphens]{url}
 
 \newif\ifxetexorluatex
 \ifxetex
