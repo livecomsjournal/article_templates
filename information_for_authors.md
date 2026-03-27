@@ -132,3 +132,7 @@ When a LiveCoMS manuscript is accepted for publication, the editors will request
 These fields should be filled out as completely as possible.
 
 When an issue of LiveCoMS is finalized, the editors will request one set of final changes. First, the authors should finish filling out the publication information shown above. Second, the `pubversion` class option must be invoked. This will create a footer with the full article citation.
+
+#### Reviewer Aids
+
+When a LiveCoMS manuscript is submitted for review, the `reviewversion` class option may be invoked in the TeX preamble (e.g., `\documentclass[...,reviewversion,...]{livecoms}`) to add line numbers to the rendered PDF. This class option should be replaced by `pubversion` (see above) to remove the line numbers in final version of the article.
