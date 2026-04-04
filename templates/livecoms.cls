@@ -49,6 +49,9 @@
 \newif\if@lessons
 \DeclareOption{lessons}{\@lessonstrue}
 
+\newif\if@roundtable
+\DeclareOption{roundtable}{\@roundtabletrue}
+
 %Publication Information
 \newif\if@pubversion
 \DeclareOption{pubversion}{\@pubversiontrue}
@@ -235,6 +238,13 @@
 % nothing
 \fi
 
+\if@roundtable
+\documenttypetrue
+\newcommand{\documenttype}{Roundtable}
+\else
+% nothing
+\fi
+
 \fancyhf{}
 \ifdocumenttype
 \chead{%
@@ -298,9 +308,15 @@
 % Updated for LiveComs
 % \setcounter{secnumdepth}{0}
 \RequirePackage[explicit]{titlesec}
-\titleformat{\section}
-  {\LARGE\bfseries\raggedright}
-  {\thesection}{1em}{#1}[]
+\if@roundtable
+  \titleformat{\section}
+    {\LARGE\bfseries\raggedright}
+    {}{0em}{#1}[]
+\else
+  \titleformat{\section}
+    {\LARGE\bfseries\raggedright}
+    {\thesection}{1em}{#1}[]
+\fi
 \titleformat{\subsection}
   {\Large\bfseries\raggedright\color{LiveCoMSMediumGrey}}
   {\thesubsection}{1em}{#1}[]
