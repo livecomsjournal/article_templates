@@ -50,5 +50,9 @@ For well-formatted manuscripts, we recommend that you let LaTeX handle figure/ta
 
 Also, remember to plan for a [representative image](https://livecomsjournal.github.io/authors/policies/index.html#article-submission) which will be used to highlight your article on the journal website and publications. We give specific guidelines for this image on the journal website in the section on [article submission](https://livecomsjournal.github.io/authors/policies/index.html#article-submission).
 
+## Style guide
+
+The Mobley Lab maintains a [community style guide](https://github.com/MobleyLab/Training/blob/main/Writing/StyleGuide.md) which provides a good starting point for some stylistic decisions regarding writing and word choices. Community contributions are encouraged.
+
 ## Acknowledgments
 We are particularly grateful to eLife for providing the excellent LaTeX template (under the CC-BY license) which provided the starting point for LiveCoMS' templates, and to [LianTze Lim](https://github.com/liantze) ([http://liantze.penguinattack.org](http://liantze.penguinattack.org)) who provided support in adapting the class file and template from eLife v 1.4.
